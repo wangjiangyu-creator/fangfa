@@ -4,10 +4,10 @@
 
 ## 公开网站
 
-GitHub Pages 地址：
+正式公开地址：
 
 ```text
-https://wangjiangyu-creator.github.io/fangfa/
+https://fangfa.eastlaw.wang/
 ```
 
 ## 本地预览

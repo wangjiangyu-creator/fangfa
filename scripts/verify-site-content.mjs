@@ -48,11 +48,11 @@ const deployWorkflow = await readFile(
 );
 
 assert.ok(
-  astroConfig.includes('site: "https://wangjiangyu-creator.github.io"'),
-  "GitHub Pages 站点域名应配置为 wangjiangyu-creator.github.io",
+  astroConfig.includes('site: "https://fangfa.eastlaw.wang"'),
+  "GitHub Pages 自定义域名应配置为 fangfa.eastlaw.wang",
 );
-assert.ok(astroConfig.includes('base: "/fangfa"'), "GitHub Pages 项目路径应配置为 /fangfa");
-assert.equal(uiText.includes('href="/'), false, "页面模板不应使用会绕过 /fangfa 的根路径 href");
+assert.ok(astroConfig.includes('base: "/"'), "自定义域名发布时站点路径应配置为根目录 /");
+assert.equal(uiText.includes('href="/'), false, "页面模板应通过 siteHref 统一生成站内链接");
 assert.ok(deployWorkflow.includes("actions/deploy-pages"), "应包含 GitHub Pages 自动部署工作流");
 assert.ok(layout.includes(requiredNotice), "全站页尾应包含网站创建和用途说明");
 assert.equal(layout.includes(misplacedFooterLink), false, "全站页尾不应放置专题11链接");
