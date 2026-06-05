@@ -162,6 +162,34 @@ for (const resourceId of [
   assert.ok(thinkingTopic.resourceIds.includes(resourceId), `专题2应关联阅读材料：${resourceId}`);
 }
 
+const theoryTopic = topics.find((topic) => topic.slug === "theory-building");
+assert.ok(theoryTopic, "应存在专题11：理论构建");
+for (const resourceId of [
+  "hart-natural-rights",
+  "fuller-speluncean",
+  "dworkin-model-rules",
+  "dworkin-hard-cases",
+  "dworkin-law-as-interpretation",
+  "rawls-two-concepts-rules",
+  "rawls-justice-fairness",
+  "rawls-public-reason",
+  "raz-legal-principles",
+  "raz-authority-law-morality",
+  "raz-rule-law-virtue",
+  "finnis-natural-law-reasoning",
+  "kelsen-pure-theory-analytical",
+  "kelsen-foundations-democracy",
+  "kelsen-natural-law-tribunal",
+  "张文显-部门法哲学引论",
+  "张文显-法学范畴意识",
+  "舒国滢-抽象法学理论",
+  "雷磊-规范法学发展",
+  "陈景辉-哈特为什么重要",
+]) {
+  assert.ok(resourceIds.has(resourceId), `应新增理论经典阅读材料：${resourceId}`);
+  assert.ok(theoryTopic.resourceIds.includes(resourceId), `专题11应关联理论经典阅读材料：${resourceId}`);
+}
+
 for (const topic of topics) {
   assert.ok(topic.overview?.length >= 2, `${topic.title} 应至少有两段导读`);
   assert.ok(topic.learningGoals?.length >= 3, `${topic.title} 应至少有三个学习目标`);

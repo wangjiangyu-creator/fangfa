@@ -13,6 +13,29 @@ const frameworkChecks = [
   { title: "不是变量清单", text: "变量之间要有因果、机制、解释或规范评价关系，否则只是资料分类。" },
   { title: "不是结论包装", text: "理论框架应在研究开始时指导材料选择，也应在结论中接受材料修正。" },
 ];
+
+const classicTheoryTracks = [
+  {
+    title: "法律实证主义",
+    text: "Hart、Raz 与 Kelsen 帮助学生区分法律效力、权威、规范性和道德评价之间的关系。",
+  },
+  {
+    title: "自然法与实践理性",
+    text: "Fuller 与 Finnis 展示法律的形式、内在道德、基本善和实践理性如何进入法律论证。",
+  },
+  {
+    title: "解释主义与权利",
+    text: "Dworkin 的规则、原则和解释理论适合训练疑难案件、权利论证和法律完整性的分析。",
+  },
+  {
+    title: "正义与公共理性",
+    text: "Rawls 的正义、公平和公共理性材料可用于连接法哲学、宪法理论和制度正当性。",
+  },
+  {
+    title: "中文法哲学",
+    text: "张文显、舒国滢、雷磊、陈景辉等材料帮助学生把分析法理学、规范法学和中文理论传统接合起来。",
+  },
+];
 ---
 
 <BaseLayout title="理论" description="法理学法哲学流派及其对法律思维的影响">
@@ -94,6 +117,20 @@ const frameworkChecks = [
       <div><strong>批判法学</strong><p>揭示法律中的权力、意识形态和结构性不平等。</p></div>
       <div><strong>解释主义</strong><p>通过原则、适合性和正当化理解法律义务。</p></div>
       <div><strong>法律与政治经济学</strong><p>把市场、国家、权力、民主和分配重新放入法律分析。</p></div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Classic Theory</p>
+        <h2>经典法哲学论文导读</h2>
+      </div>
+      <p>这一组阅读偏重纯理论和规范哲学：不是为了背诵作者观点，而是训练学生识别法概念、法律效力、权威、原则、正义和合法性之间的真实分歧。</p>
+    </div>
+    <div class="matrix">
+      {classicTheoryTracks.map((item) => (
+        <div><strong>{item.title}</strong><p>{item.text}</p></div>
+      ))}
     </div>
   </section>
   <section class="section container">

@@ -294,6 +294,226 @@ export const additionalResources: Resource[] = [
     url: "https://academic.oup.com/book/46710"
   },
   {
+    id: "hart-natural-rights",
+    title: "Are There Any Natural Rights?",
+    author: "H. L. A. Hart",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "权利理论", "法律实证主义", "理论"],
+    citation: "Hart, H. L. A. (1955). Are There Any Natural Rights? The Philosophical Review, 64(2), 175-191.",
+    note: "Hart 在权利与自由问题上的经典哲学论文，可用于区分一般权利、特殊权利与法律权利。",
+    url: "https://doi.org/10.2307/2182586"
+  },
+  {
+    id: "fuller-speluncean",
+    title: "The Case of the Speluncean Explorers",
+    author: "Lon L. Fuller",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "法律解释", "自然法", "理论"],
+    citation: "Fuller, L. L. (1949). The Case of the Speluncean Explorers. Harvard Law Review, 62(4), 616-645.",
+    note: "以虚构疑难案件展示文本主义、目的论、自然法和司法克制等不同理论立场如何导出不同判决。",
+    url: "https://www.jstor.org/stable/1336085"
+  },
+  {
+    id: "dworkin-model-rules",
+    title: "The Model of Rules",
+    author: "Ronald Dworkin",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "法律原则", "解释主义", "理论"],
+    citation: "Dworkin, R. (1967). The Model of Rules. University of Chicago Law Review, 35(1), 14-46.",
+    note: "Dworkin 对规则中心法律实证主义的经典批评，提出原则在法律义务和疑难案件中的地位。",
+    url: "https://chicagounbound.uchicago.edu/uclrev/vol35/iss1/3/"
+  },
+  {
+    id: "dworkin-hard-cases",
+    title: "Hard Cases",
+    author: "Ronald Dworkin",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "疑难案件", "法律原则", "理论"],
+    citation: "Dworkin, R. (1975). Hard Cases. Harvard Law Review, 88(6), 1057-1109.",
+    note: "围绕疑难案件、司法裁量、权利和原则展开，是理解法律解释主义的重要论文。",
+    url: "https://doi.org/10.2307/1340249"
+  },
+  {
+    id: "dworkin-law-as-interpretation",
+    title: "Law as Interpretation",
+    author: "Ronald Dworkin",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "法律解释", "解释主义", "理论"],
+    citation: "Dworkin, R. (1982). Law as Interpretation. Critical Inquiry, 9(1), 179-200.",
+    note: "把法律理解为解释性实践，为学生理解适合性、正当化和建构性解释提供入口。",
+    url: "https://doi.org/10.1086/448204"
+  },
+  {
+    id: "rawls-two-concepts-rules",
+    title: "Two Concepts of Rules",
+    author: "John Rawls",
+    type: "论文",
+    language: "英文",
+    tags: ["政治哲学", "规则", "正义理论", "理论"],
+    citation: "Rawls, J. (1955). Two Concepts of Rules. The Philosophical Review, 64(1), 3-32.",
+    note: "区分实践的规则与行动摘要，有助于理解制度理由、惩罚理由和法律规则的正当化层次。",
+    url: "https://doi.org/10.2307/2182230"
+  },
+  {
+    id: "rawls-justice-fairness",
+    title: "Justice as Fairness",
+    author: "John Rawls",
+    type: "论文",
+    language: "英文",
+    tags: ["政治哲学", "正义理论", "规范理论", "理论"],
+    citation: "Rawls, J. (1958). Justice as Fairness. The Philosophical Review, 67(2), 164-194.",
+    note: "Rawls 正义理论早期代表作，适合讨论原初状态、公平、制度正当性和分配正义。",
+    url: "https://doi.org/10.2307/2182612"
+  },
+  {
+    id: "rawls-public-reason",
+    title: "The Idea of Public Reason Revisited",
+    author: "John Rawls",
+    type: "论文",
+    language: "英文",
+    tags: ["政治哲学", "公共理性", "宪法理论", "理论"],
+    citation: "Rawls, J. (1997). The Idea of Public Reason Revisited. University of Chicago Law Review, 64(3), 765-807.",
+    note: "公共理性理论的成熟表达，可用于连接法哲学、宪法论证和民主合法性。",
+    url: "https://chicagounbound.uchicago.edu/uclrev/vol64/iss3/2/"
+  },
+  {
+    id: "raz-legal-principles",
+    title: "Legal Principles and the Limits of Law",
+    author: "Joseph Raz",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "法律原则", "法律实证主义", "理论"],
+    citation: "Raz, J. (1972). Legal Principles and the Limits of Law. Yale Law Journal, 81(5), 823-854.",
+    note: "Raz 对原则、规则和法律界限的分析，可与 Dworkin 的原则理论形成对读。",
+    url: "https://openyls.law.yale.edu/handle/20.500.13051/15118"
+  },
+  {
+    id: "raz-authority-law-morality",
+    title: "Authority, Law, and Morality",
+    author: "Joseph Raz",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "权威理论", "法律实证主义", "理论"],
+    citation: "Raz, J. (1985). Authority, Law and Morality. The Monist, 68(3), 295-324.",
+    note: "Raz 排他性法律实证主义与权威理论的核心论文，适合讨论法律为什么能提供排他性理由。",
+    url: "https://doi.org/10.5840/monist198568335"
+  },
+  {
+    id: "raz-rule-law-virtue",
+    title: "The Rule of Law and Its Virtue",
+    author: "Joseph Raz",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "法治", "法律实证主义", "理论"],
+    citation: "Raz, J. (1977). The Rule of Law and Its Virtue. Law Quarterly Review, 93, 195-211.",
+    note: "把法治理解为法律制度的一种特殊德性，而不是所有政治美德的集合。",
+    url: "https://philpapers.org/rec/RAZTRO-2"
+  },
+  {
+    id: "finnis-natural-law-reasoning",
+    title: "Natural Law and Legal Reasoning",
+    author: "John Finnis",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "自然法", "实践理性", "理论"],
+    citation: "Finnis, J. (1990). Natural Law and Legal Reasoning. Cleveland State Law Review, 38(1), 1-13.",
+    note: "以实践理性和基本善为核心说明自然法如何进入法律推理，而不是简单诉诸道德直觉。",
+    url: "https://engagedscholarship.csuohio.edu/clevstlrev/vol38/iss1/3/"
+  },
+  {
+    id: "kelsen-pure-theory-analytical",
+    title: "The Pure Theory of Law and Analytical Jurisprudence",
+    author: "Hans Kelsen",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "纯粹法理论", "法律实证主义", "理论"],
+    citation: "Kelsen, H. (1941). The Pure Theory of Law and Analytical Jurisprudence. Harvard Law Review, 55(1), 44-70.",
+    note: "纯粹法理论在英语法学界的重要表达，适合讨论规范、效力、科学性与价值中立。",
+    url: "https://doi.org/10.2307/1334739"
+  },
+  {
+    id: "kelsen-foundations-democracy",
+    title: "Foundations of Democracy",
+    author: "Hans Kelsen",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "民主理论", "规范理论", "理论"],
+    citation: "Kelsen, H. (1955). Foundations of Democracy. Ethics, 66(1), 1-101.",
+    note: "从相对主义、自由和程序角度论证民主基础，可与 Rawls 的政治自由主义形成比较。",
+    url: "https://doi.org/10.1086/291036"
+  },
+  {
+    id: "kelsen-natural-law-tribunal",
+    title: "The Natural-Law Doctrine Before the Tribunal of Science",
+    author: "Hans Kelsen",
+    type: "论文",
+    language: "英文",
+    tags: ["法哲学", "自然法批判", "纯粹法理论", "理论"],
+    citation: "Kelsen, H. (1949). The Natural-Law Doctrine Before the Tribunal of Science. Western Political Quarterly, 2(4), 481-513.",
+    note: "Kelsen 对自然法学说的哲学批判，可与 Fuller 和 Finnis 的自然法立场组成三角阅读。",
+    url: "https://doi.org/10.1177/106591294900200401"
+  },
+  {
+    id: "张文显-部门法哲学引论",
+    title: "部门法哲学引论——属性和方法",
+    author: "张文显",
+    type: "论文",
+    language: "中文",
+    tags: ["法哲学", "部门法哲学", "法学方法", "理论"],
+    citation: "张文显：《部门法哲学引论——属性和方法》。",
+    note: "讨论部门法哲学的学科属性和方法边界，适合帮助学生把抽象法哲学与具体部门法问题连接起来。",
+    url: "https://www.legal-theory.org/?act=view&id=10841&mod=info"
+  },
+  {
+    id: "张文显-法学范畴意识",
+    title: "论法学的范畴意识、范畴体系与基石范畴",
+    author: "张文显",
+    type: "论文",
+    language: "中文",
+    tags: ["法哲学", "法学范畴", "理论构建", "理论"],
+    citation: "张文显：《论法学的范畴意识、范畴体系与基石范畴》。",
+    note: "以范畴意识说明法学理论如何形成概念系统，适合训练理论框架中的概念层次。",
+    url: "https://www.legal-theory.org/?act=view&id=1679&mod=info"
+  },
+  {
+    id: "舒国滢-抽象法学理论",
+    title: "从方法论看抽象法学理论的发展",
+    author: "舒国滢",
+    type: "论文",
+    language: "中文",
+    tags: ["法哲学", "法学方法论", "法律论证", "理论"],
+    citation: "舒国滢：《从方法论看抽象法学理论的发展》。",
+    note: "从法哲学、法律论证和法学方法论角度说明抽象法学理论如何发展。",
+    url: "https://www.legal-theory.org/?act=view&id=8646&mod=info"
+  },
+  {
+    id: "雷磊-规范法学发展",
+    title: "主题的拓展与方法意识的觉醒——四十年来规范法学的发展",
+    author: "雷磊",
+    type: "论文",
+    language: "中文",
+    tags: ["法理学", "规范法学", "法学方法论", "理论"],
+    citation: "雷磊：《主题的拓展与方法意识的觉醒——四十年来规范法学的发展》，《北京航空航天大学学报（社会科学版）》2019年第1期。",
+    note: "梳理中国规范法学在法概念、基本范畴和方法意识上的发展，可作为中文理论脉络导读。",
+    url: "https://bhxb.buaa.edu.cn/bhsk/cn/article/doi/10.13766/j.bhsk.1008-2204.2018.0358"
+  },
+  {
+    id: "陈景辉-哈特为什么重要",
+    title: "哈特为什么重要？——当代法哲学导引",
+    author: "陈景辉",
+    type: "论文",
+    language: "中文",
+    tags: ["法哲学", "概念分析", "法律实证主义", "理论"],
+    citation: "陈景辉：《哈特为什么重要？——当代法哲学导引》。",
+    note: "以 Hart 与《法律的概念》为入口说明当代分析法哲学的概念分析路径，适合作为 Hart、Raz 与 Dworkin 阅读后的中文补充。",
+    url: "https://www.aisixiang.com/data/158609.html"
+  },
+  {
     id: "kennedy-form-substance",
     title: "Form and Substance in Private Law Adjudication",
     author: "Duncan Kennedy",
@@ -1455,7 +1675,7 @@ export const topicAssociations: Record<string, TopicAssociation> = {
     exerciseIds: ["abstract-rewrite-lab", "article-anatomy", "method-section-audit"]
   },
   "theory-building": {
-    resourceIds: ["holmes-path", "hart-separation", "fuller-fidelity", "maccormick-legal-reasoning", "alexy-legal-argumentation", "kennedy-form-substance", "unger-cls-movement", "finnis-natural-law", "kapczynski-lpe-framework", "galanter-haves", "black-behavior-law", "frankenberg-critical-comparisons", "mattei-three-patterns", "舒国滢-法学方法论", "强世功-法律人的城邦"],
+    resourceIds: ["holmes-path", "hart-separation", "hart-natural-rights", "fuller-fidelity", "fuller-speluncean", "dworkin-model-rules", "dworkin-hard-cases", "dworkin-law-as-interpretation", "rawls-two-concepts-rules", "rawls-justice-fairness", "rawls-public-reason", "raz-legal-principles", "raz-authority-law-morality", "raz-rule-law-virtue", "finnis-natural-law", "finnis-natural-law-reasoning", "kelsen-pure-theory-analytical", "kelsen-foundations-democracy", "kelsen-natural-law-tribunal", "maccormick-legal-reasoning", "alexy-legal-argumentation", "kennedy-form-substance", "unger-cls-movement", "kapczynski-lpe-framework", "galanter-haves", "black-behavior-law", "frankenberg-critical-comparisons", "mattei-three-patterns", "张文显-部门法哲学引论", "张文显-法学范畴意识", "舒国滢-法学方法论", "舒国滢-抽象法学理论", "雷磊-规范法学发展", "陈景辉-哈特为什么重要", "强世功-法律人的城邦"],
     exampleIds: ["holmes-path-example", "hart-fuller-debate-example", "kennedy-form-substance-example", "kapczynski-lpe-example", "galanter-haves-example", "schauer-thinking-example"],
     exerciseIds: ["theory-debate-map", "article-anatomy", "chinese-method-debate-map"]
   },
