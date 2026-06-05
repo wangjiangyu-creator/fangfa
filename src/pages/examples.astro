@@ -28,11 +28,14 @@ const attachmentStats = [
 ];
 
 const groupedExamples = [
+  { label: "中文方法论范例", items: libraryExamples.filter((example) => ["中国法学方法", "法学方法论", "方法论批评", "范式辨析", "方法定位", "方法立场"].some((tag) => example.method.includes(tag))) },
   { label: "方法论与法律思维", items: libraryExamples.filter((example) => ["法学方法", "方法论", "法律推理", "规则理论", "研究写作"].some((tag) => example.method.includes(tag))) },
   { label: "理论与法理", items: libraryExamples.filter((example) => ["理论", "法哲学", "批判法学", "法律现实主义"].some((tag) => example.method.includes(tag))) },
   { label: "教义学与解释", items: libraryExamples.filter((example) => ["教义学", "概念分析", "规范"].some((tag) => example.method.includes(tag))) },
   { label: "比较法与移植", items: libraryExamples.filter((example) => ["比较法", "法律移植"].some((tag) => example.method.includes(tag))) },
   { label: "实证与法社会学", items: libraryExamples.filter((example) => ["实证", "法社会学", "田野", "法律意识", "谈判"].some((tag) => example.method.includes(tag))) },
+  { label: "裁判文书与案例研究", items: libraryExamples.filter((example) => ["裁判文书", "案例", "指导性案例", "内容分析", "文本分析"].some((tag) => example.method.includes(tag))) },
+  { label: "交叉与社科法学", items: libraryExamples.filter((example) => ["社科法学", "交叉学科", "社会—法律", "法律与社会"].some((tag) => example.method.includes(tag))) },
   { label: "AI 与法律科技", items: libraryExamples.filter((example) => ["AI", "人工智能", "算法", "法律人工智能"].some((tag) => example.method.includes(tag))) },
 ].filter((group) => group.items.length > 0);
 ---

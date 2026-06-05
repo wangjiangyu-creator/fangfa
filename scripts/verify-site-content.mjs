@@ -190,6 +190,90 @@ for (const resourceId of [
   assert.ok(theoryTopic.resourceIds.includes(resourceId), `专题11应关联理论经典阅读材料：${resourceId}`);
 }
 
+const empiricalTopic = topics.find((topic) => topic.slug === "empirical-legal-research");
+const doctrinalTopic = topics.find((topic) => topic.slug === "doctrinal-method");
+const interdisciplinaryTopic = topics.find((topic) => topic.slug === "interdisciplinary-law");
+const typesTopic = topics.find((topic) => topic.slug === "types-and-presentation");
+assert.ok(empiricalTopic, "应存在专题8：实证研究方法");
+assert.ok(doctrinalTopic, "应存在专题6：法教义学方法");
+assert.ok(interdisciplinaryTopic, "应存在专题9：跨学科法律研究");
+assert.ok(typesTopic, "应存在专题10：研究类型与呈现");
+
+for (const resourceId of [
+  "胡玉鸿-研究方法争议",
+  "胡玉鸿-法学方法论体系构造",
+  "陈瑞华-第三条道路",
+  "张永健程金华-法律实证研究方法坐标",
+  "程金华-迈向科学法律实证研究",
+  "何挺-裁判文书方法论检讨",
+  "熊丙万王军乐-裁判文书数据法实证",
+  "屈茂辉-裁判文书实证审视",
+  "韩宝-社会法律研究方法展开",
+  "陈兴良-法学知识演进分化",
+  "陈柏峰-法律经验研究机制分析",
+  "陈柏峰-法律经验研究微观过程",
+  "侯猛-社科法学研究格局",
+  "李晟-实践视角社科法学",
+  "郭栋-法律社会科学研究边界",
+  "林来梵-宪法学研究方法评辨",
+  "余凌云-行政法案例分析方法",
+  "胡敏洁-行政法案例研究方法",
+  "赵梦闪-指导案例法律方法",
+  "郑永流-法律交叉研究原理",
+  "王利明-法释义学体系",
+  "邹兵建-法教义学释疑",
+  "雷磊-法学方法论观察反思",
+  "雷鑫洪-方法论演进中国法律实证研究",
+  "陈柏峰-法律实证研究兴起分化",
+  "白建军-刑法教义学实证研究",
+  "金可可-民法实证研究方法",
+]) {
+  assert.ok(resourceIds.has(resourceId), `应新增中文研究方法文献：${resourceId}`);
+}
+
+for (const exampleId of [
+  "hu-yuhong-method-debate-example",
+  "zhang-cheng-method-coordinate-example",
+  "cheng-scientific-empirical-example",
+  "he-judgment-documents-example",
+  "xiong-judgment-data-example",
+  "qu-judgment-review-example",
+  "chen-baifeng-mechanism-example",
+  "han-socio-legal-method-example",
+  "lin-constitutional-method-example",
+  "yu-admin-case-method-example",
+  "zhao-guiding-cases-example",
+  "zheng-cross-research-example",
+  "wang-dogmatics-interpretive-example",
+  "lei-xinhong-empirical-evolution-example",
+  "bai-criminal-dogmatics-empirical-example",
+  "jin-civil-empirical-dogmatics-example",
+]) {
+  assert.ok(exampleIds.has(exampleId), `应新增中文研究方法范例：${exampleId}`);
+}
+
+for (const resourceId of [
+  "张永健程金华-法律实证研究方法坐标",
+  "何挺-裁判文书方法论检讨",
+  "熊丙万王军乐-裁判文书数据法实证",
+  "屈茂辉-裁判文书实证审视",
+  "雷鑫洪-方法论演进中国法律实证研究",
+  "陈柏峰-法律实证研究兴起分化",
+  "白建军-刑法教义学实证研究",
+  "金可可-民法实证研究方法",
+]) {
+  assert.ok(empiricalTopic.resourceIds.includes(resourceId), `专题8应关联中文实证方法文献：${resourceId}`);
+}
+for (const resourceId of ["王利明-法释义学体系", "邹兵建-法教义学释疑", "白建军-刑法教义学实证研究", "金可可-民法实证研究方法", "余凌云-行政法案例分析方法"]) {
+  assert.ok(doctrinalTopic.resourceIds.includes(resourceId), `专题6应关联中文教义学方法文献：${resourceId}`);
+}
+for (const resourceId of ["韩宝-社会法律研究方法展开", "陈柏峰-法律经验研究机制分析", "郑永流-法律交叉研究原理"]) {
+  assert.ok(interdisciplinaryTopic.resourceIds.includes(resourceId), `专题9应关联中文交叉方法文献：${resourceId}`);
+}
+for (const resourceId of ["胡玉鸿-研究方法争议", "胡玉鸿-法学方法论体系构造", "雷磊-法学方法论观察反思", "陈瑞华-第三条道路", "雷鑫洪-方法论演进中国法律实证研究", "白建军-刑法教义学实证研究"]) {
+  assert.ok(typesTopic.resourceIds.includes(resourceId), `专题10应关联中文方法论文献：${resourceId}`);
+}
+
 for (const topic of topics) {
   assert.ok(topic.overview?.length >= 2, `${topic.title} 应至少有两段导读`);
   assert.ok(topic.learningGoals?.length >= 3, `${topic.title} 应至少有三个学习目标`);

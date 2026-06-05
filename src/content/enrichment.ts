@@ -1020,26 +1020,323 @@ export const additionalResources: Resource[] = [
     url: "https://www.aisixiang.com/data/123081.html"
   },
   {
+    id: "胡玉鸿-研究方法争议",
+    title: "围绕法学研究方法的理论争议及其辨析",
+    author: "胡玉鸿",
+    type: "论文",
+    language: "中文",
+    tags: ["法学方法", "方法论", "研究设计", "中国法"],
+    citation: "胡玉鸿：《围绕法学研究方法的理论争议及其辨析》，《政法论坛》2023年第3期。",
+    note: "系统辨析法学研究方法是否有优劣、是否独立于其他学科、以及主观性与客观性等基础争议。",
+    url: "https://www.cssn.cn/fx/xzyc/202310/t20231020_5692056.shtml"
+  },
+  {
+    id: "胡玉鸿-法学方法论体系构造",
+    title: "法学方法论的属性定位、发生契机与体系构造",
+    author: "胡玉鸿",
+    type: "论文",
+    language: "中文",
+    tags: ["法学方法", "法学方法论", "理论构建", "中国法"],
+    citation: "胡玉鸿：《法学方法论的属性定位、发生契机与体系构造》，《学术月刊》2023年第4期，第17-32页。",
+    note: "从法学方法论的属性、发生条件和体系结构展开，是理解方法论本身的基础中文文献。",
+    url: "https://www.xsyk021.com/article/id/3281846e-bb9f-430a-9447-9b2ef3c8e122"
+  },
+  {
+    id: "陈瑞华-第三条道路",
+    title: "第三条道路——连接理论与实践的法学研究方法",
+    author: "陈瑞华",
+    type: "论文",
+    language: "中文",
+    tags: ["法学方法", "研究设计", "理论与实践", "中国法"],
+    citation: "陈瑞华：《第三条道路——连接理论与实践的法学研究方法》。",
+    note: "强调把法律实践问题转化为学术问题，并在规范分析、经验观察与理论提炼之间建立连接。",
+    url: "https://ielaw.uibe.edu.cn/zyflrcjy/fxjyyj/10773.htm"
+  },
+  {
+    id: "张永健程金华-法律实证研究方法坐标",
+    title: "法律实证研究的方法坐标",
+    author: "张永健、程金华",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "法学方法", "社科法学", "研究设计"],
+    citation: "张永健、程金华：《法律实证研究的方法坐标》，《中国法律评论》2018年第6期，第73-89页。",
+    note: "用研究主题和分析方法两个维度定位法律实证研究，帮助学生区分实证法学、社科法学和教义学。",
+    url: "https://static.ilawpress.com/lpdpres/html/302596831303434752.html"
+  },
+  {
+    id: "程金华-迈向科学法律实证研究",
+    title: "迈向科学的法律实证研究",
+    author: "程金华",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "研究设计", "方法论批评", "中国法"],
+    citation: "程金华：《迈向科学的法律实证研究》，《清华法学》2018年第4期。",
+    note: "从论题、理论和技术三个层面反思中国法律实证研究质量，适合训练学生做方法审计。",
+    url: "http://www.socio-legal.sjtu.edu.cn/Download/Download.aspx?Guid=6fcd74e243a640fb9fb1480499d84f18"
+  },
+  {
+    id: "何挺-裁判文书方法论检讨",
+    title: "法学研究中裁判文书运用的方法论检讨——以刑事法文献为例的内容分析",
+    author: "何挺",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "裁判文书", "内容分析", "研究设计"],
+    citation: "何挺：《法学研究中裁判文书运用的方法论检讨——以刑事法文献为例的内容分析》，《法学研究》2022年第3期。",
+    note: "以刑事法文献为样本检讨裁判文书数据的获取、抽样、分析和结论适用问题。",
+    url: "https://cacpl.chinalaw.org.cn/portal/article/index/id/6644.html"
+  },
+  {
+    id: "熊丙万王军乐-裁判文书数据法实证",
+    title: "基于裁判文书数据的法实证研究方法——以“知假买假”问题为例",
+    author: "熊丙万、王军乐",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "裁判文书", "数据分析", "法教义学"],
+    citation: "熊丙万、王军乐：《基于裁判文书数据的法实证研究方法——以“知假买假”问题为例》，《经贸法律评论》2023年第6期。",
+    note: "以消费者惩罚性赔偿裁判文书为材料，示范如何从规范问题出发设计数据抽取和事实判断。",
+    url: "https://law.uibe.edu.cn/xzkw/gk/2023nd6q/2bc9949139dc41b4b4939309f3c8335d.htm"
+  },
+  {
+    id: "屈茂辉-裁判文书实证审视",
+    title: "基于裁判文书的法学实证研究之审视",
+    author: "屈茂辉",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "裁判文书", "知识图谱", "研究设计"],
+    citation: "屈茂辉：《基于裁判文书的法学实证研究之审视》，《现代法学》2020年第3期。",
+    note: "用知识图谱梳理裁判文书实证研究的发展状况、学术群体、主题局限和方法风险。",
+    url: "https://qks.swupl.edu.cn/docs/2020-06/20200620214716351315.pdf"
+  },
+  {
+    id: "韩宝-社会法律研究方法展开",
+    title: "各归其位：“社会—法律研究”方法的展开",
+    author: "韩宝",
+    type: "论文",
+    language: "中文",
+    tags: ["社科法学", "法律与社会", "法学方法", "交叉学科"],
+    citation: "韩宝：《各归其位：“社会—法律研究”方法的展开》，《厦门大学法律评论》2017年第30期，第21-54页。",
+    note: "说明社会—法律研究与法教义学的分工、比较和可能的互补关系。",
+    url: "http://www.socio-legal.sjtu.edu.cn/wxzy/info.aspx?itemid=3737&lcid=30"
+  },
+  {
+    id: "陈兴良-法学知识演进分化",
+    title: "法学知识的演进与分化——以社科法学与法教义学为视角",
+    author: "陈兴良",
+    type: "论文",
+    language: "中文",
+    tags: ["法学方法", "社科法学", "法教义学", "知识论"],
+    citation: "陈兴良：《法学知识的演进与分化——以社科法学与法教义学为视角》，《中国法律评论》2021年第4期。",
+    note: "从知识论角度解释社科法学与法教义学的分化，适合学生理解方法争论背后的学科定位。",
+    url: "https://www.law.pku.edu.cn/xwzx/pl/132024.htm"
+  },
+  {
+    id: "陈柏峰-法律经验研究机制分析",
+    title: "法律经验研究的机制分析方法",
+    author: "陈柏峰",
+    type: "论文",
+    language: "中文",
+    tags: ["社科法学", "经验研究", "机制分析", "质性研究"],
+    citation: "陈柏峰：《法律经验研究的机制分析方法》，《法商研究》2016年第4期。",
+    note: "提出以田野工作、经验饱和、因果链条和机制解释展开法律经验研究。",
+    url: "https://zgfxqk.chinalaw.org.cn/portal/article/index/id/2047.html"
+  },
+  {
+    id: "陈柏峰-法律经验研究微观过程",
+    title: "法律经验研究的微观过程与理论创造",
+    author: "陈柏峰",
+    type: "论文",
+    language: "中文",
+    tags: ["社科法学", "质性研究", "理论构建", "中国法"],
+    citation: "陈柏峰：《法律经验研究的微观过程与理论创造》，《法制与社会发展》2021年第2期，第171-192页。",
+    note: "把经验材料储备、田野发现、理论构思和命题表达拆解为可学习的研究过程。",
+    url: "http://www.socio-legal.sjtu.edu.cn/wxzy/info.aspx?itemid=3848"
+  },
+  {
+    id: "侯猛-社科法学研究格局",
+    title: "社科法学的研究格局：从分立走向整合",
+    author: "侯猛",
+    type: "论文",
+    language: "中文",
+    tags: ["社科法学", "法社会学", "交叉学科", "研究范式"],
+    citation: "侯猛：《社科法学的研究格局：从分立走向整合》。",
+    note: "从法律社会学、法律经济学和法律认知科学等进路梳理社科法学的整合方向。",
+    url: "http://iolaw.cssn.cn/fxyjdt/201704/t20170421_4649751.shtml"
+  },
+  {
+    id: "李晟-实践视角社科法学",
+    title: "实践视角下的社科法学：以法教义学为对照",
+    author: "李晟",
+    type: "论文",
+    language: "中文",
+    tags: ["社科法学", "法教义学", "实践研究", "中国法"],
+    citation: "李晟：《实践视角下的社科法学：以法教义学为对照》，《法商研究》2014年第5期，第81-86页。",
+    note: "以实践问题为中心比较社科法学与法教义学的研究立场和问题意识。",
+    url: "https://www.legal-theory.org/?mod=info&act=view&id=20426"
+  },
+  {
+    id: "郭栋-法律社会科学研究边界",
+    title: "法律的社会科学研究：理论边界与跨域协同",
+    author: "郭栋",
+    type: "论文",
+    language: "中文",
+    tags: ["社科法学", "交叉学科", "理论边界", "研究设计"],
+    citation: "郭栋：《法律的社会科学研究：理论边界与跨域协同》，《经贸法律评论》2019年第4期，第133-147页。",
+    note: "讨论法律社会科学研究的规范边界、事实边界和跨域协同问题。",
+    url: "https://law.uibe.edu.cn/docs/2020-07/20200720224023404138.pdf"
+  },
+  {
+    id: "林来梵-宪法学研究方法评辨",
+    title: "中国宪法学研究方法评辨：过去、现在与未来",
+    author: "林来梵",
+    type: "论文",
+    language: "中文",
+    tags: ["宪法学", "法学方法", "规范研究", "社科法学"],
+    citation: "林来梵：《中国宪法学研究方法评辨：过去、现在与未来》，中国社会科学网2024年3月15日。",
+    note: "以宪法学为例检视规范宪法学、宪法社会学、宪法政策学等方法路径。",
+    url: "https://www.tsinghua.edu.cn/info/1662/110179.htm"
+  },
+  {
+    id: "余凌云-行政法案例分析方法",
+    title: "行政法案例分析的基本方法",
+    author: "余凌云",
+    type: "论文",
+    language: "中文",
+    tags: ["案例研究", "行政法", "法律方法", "法教义学"],
+    citation: "余凌云：《行政法案例分析的基本方法》，《法律适用》2025年第3期。",
+    note: "提出行政法案例分析的“三步分析法”：梳理事实、检索规范、分析争议。",
+    url: "https://www.law.tsinghua.edu.cn/info/1036/20102.htm"
+  },
+  {
+    id: "胡敏洁-行政法案例研究方法",
+    title: "论行政法中的案例研究方法",
+    author: "胡敏洁",
+    type: "论文",
+    language: "中文",
+    tags: ["案例研究", "行政法", "研究设计", "中国法"],
+    citation: "胡敏洁：《论行政法中的案例研究方法》，《当代法学》2010年第1期，第76-82页。",
+    note: "区分个案分析、批量研究和多层次案例研究，适合案例研究方法训练。",
+    url: "http://calaw.ruc.edu.cn/gfal/xzfalfx/b867c3d6466a48b6b78556403ced523c.htm"
+  },
+  {
+    id: "赵梦闪-指导案例法律方法",
+    title: "法律方法在指导性案例中的运用研究——以178个指导案例为文本的考察",
+    author: "赵梦闪",
+    type: "论文",
+    language: "中文",
+    tags: ["案例研究", "法律方法", "指导性案例", "文本分析"],
+    citation: "赵梦闪：《法律方法在指导性案例中的运用研究——以178个指导案例为文本的考察》，东方法学微信公众号2023年11月9日，澎湃新闻转载。",
+    note: "以最高人民法院178个指导案例为文本，考察法律发现、法律解释、原则适用和漏洞填补等方法。",
+    url: "https://www.thepaper.cn/newsDetail_forward_25236025"
+  },
+  {
+    id: "郑永流-法律交叉研究原理",
+    title: "法律的“交叉”研究和应用的原理",
+    author: "郑永流",
+    type: "论文",
+    language: "中文",
+    tags: ["交叉学科", "法学方法", "法教义学", "理论构建"],
+    citation: "郑永流：《法律的“交叉”研究和应用的原理》，《中国法学》2018年第4期，第124-139页。",
+    note: "从法律的复数性和制定法的动态性说明教义学与非教义学知识并存的根据。",
+    url: "https://clsjp.chinalaw.org.cn/portal/article/index/id/9646.html"
+  },
+  {
+    id: "王利明-法释义学体系",
+    title: "从法教义学迈向法释义学——兼谈中国自主法释义学体系之构建",
+    author: "王利明",
+    type: "论文",
+    language: "中文",
+    tags: ["法教义学", "法释义学", "法律解释", "中国法"],
+    citation: "王利明：《从法教义学迈向法释义学——兼谈中国自主法释义学体系之构建》，《法学家》2025年第4期。",
+    note: "从中国法语境反思德国法教义学名称、内容和方法，提出构建自主法释义学体系。",
+    url: "https://www.civillaw.com.cn/t/?id=40124"
+  },
+  {
+    id: "邹兵建-法教义学释疑",
+    title: "法教义学释疑——以刑法教义学为重点",
+    author: "邹兵建",
+    type: "论文",
+    language: "中文",
+    tags: ["法教义学", "刑法", "方法论", "规范研究"],
+    citation: "邹兵建：《法教义学释疑——以刑法教义学为重点》，《刑事法评论》第42卷，2018年。",
+    note: "澄清法教义学、解释论、立法论和实践理性的关系，适合部门法方法训练。",
+    url: "https://ccj.pku.edu.cn/article/info?id=331259780"
+  },
+  {
+    id: "雷磊-法学方法论观察反思",
+    title: "法学方法论研究在中国：观察与反思",
+    author: "雷磊",
+    type: "论文",
+    language: "中文",
+    tags: ["法学方法论", "法律方法", "学术史", "中国法"],
+    citation: "雷磊：《法学方法论研究在中国：观察与反思》，《社会科学》2023年第8期，第7页以下。",
+    note: "从两波研究热潮、八个论题和若干反思切入，帮助学生理解中国法学方法论的学术史与现实问题。",
+    url: "https://www.aisixiang.com/data/156316.html"
+  },
+  {
+    id: "雷鑫洪-方法论演进中国法律实证研究",
+    title: "方法论演进视野下的中国法律实证研究",
+    author: "雷鑫洪",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "文献计量", "法学方法论", "研究范式"],
+    citation: "雷鑫洪：《方法论演进视野下的中国法律实证研究》，《法学研究》2017年第4期。",
+    note: "以知网文献为样本，用可视化计量分析梳理中国法律实证研究的数量、学科分布和方法瓶颈。",
+    url: "https://faxueyanjiu.ajcass.com/Admin/UploadFile/publish_article/2017/4/20170406.pdf"
+  },
+  {
+    id: "陈柏峰-法律实证研究兴起分化",
+    title: "法律实证研究的兴起与分化",
+    author: "陈柏峰",
+    type: "论文",
+    language: "中文",
+    tags: ["实证研究", "社科法学", "学术史", "研究范式"],
+    citation: "陈柏峰：《法律实证研究的兴起与分化》，《中国法学》2018年第3期，第132-149页。",
+    note: "从调研传统、苏力式经验研究、定性与定量分化等线索，解释中国法律实证研究的历史来源与共同挑战。",
+    url: "https://www.aisixiang.com/data/110695.html"
+  },
+  {
+    id: "白建军-刑法教义学实证研究",
+    title: "论刑法教义学与实证研究",
+    author: "白建军",
+    type: "论文",
+    language: "中文",
+    tags: ["法教义学", "实证研究", "刑法", "方法整合"],
+    citation: "白建军：《论刑法教义学与实证研究》，《法学研究》2021年第3期。",
+    note: "说明刑法教义学与刑法实证研究并非根本对立，适合展示规范研究和大样本经验材料如何互相校正。",
+    url: "https://www.socio-legal.sjtu.edu.cn/wxzy/info.aspx?itemid=3994"
+  },
+  {
+    id: "金可可-民法实证研究方法",
+    title: "民法实证研究方法与民法教义学",
+    author: "金可可",
+    type: "论文",
+    language: "中文",
+    tags: ["民法", "实证研究", "法教义学", "方法整合"],
+    citation: "金可可：《民法实证研究方法与民法教义学》，《法学研究》2012年第1期，第48-50页。",
+    note: "以民法为场域讨论实证材料进入教义学论证的方式和限度，适合训练方法边界意识。",
+    url: "https://sns.wanfangdata.com.cn/perio/fxyj?issueNum=1&publishYear=2012&tabId=article"
+  },
+  {
     id: "左卫民-范式革命",
     title: "一场新的范式革命？",
     author: "左卫民",
     type: "论文",
     language: "中文",
     tags: ["实证研究", "社科法学", "中国法", "研究范式"],
-    citation: "左卫民：《一场新的范式革命？》。",
+    citation: "左卫民：《一场新的范式革命？——解读中国法律实证研究》，《清华法学》2017年第3期。",
     note: "从中国法学语境讨论法律实证研究的兴起及其与社科法学的关系。",
     url: "http://iolaw.cssn.cn/fxyjdt/201707/t20170714_4651521.shtml"
   },
   {
     id: "贺欣-经验地研究法律",
-    title: "经验地研究法律：基于社会科学地外部视角",
+    title: "经验地研究法律：基于社会科学的外部视角",
     author: "贺欣",
     type: "论文",
     language: "中文",
     tags: ["法社会学", "实证研究", "交叉学科", "中国法"],
-    citation: "贺欣：《经验地研究法律：基于社会科学地外部视角》。",
+    citation: "贺欣：《经验地研究法律：基于社会科学的外部视角》，《学术月刊》2021年第3期，第106-113页。",
     note: "说明从法律外部进行经验研究的意义，适合连接法社会学和中国司法研究。",
-    url: "http://www.socio-legal.sjtu.edu.cn/wxzy/info.aspx?itemid=3849"
+    url: "https://www.xsyk021.com/article/id/0fb5b63f-da0c-418c-aa97-04847e41dacb"
   },
   {
     id: "贺欣-街头研究者",
@@ -1474,6 +1771,182 @@ export const additionalExamples: Example[] = [
     url: "https://www.aisixiang.com/data/123081.html"
   },
   {
+    id: "hu-yuhong-method-debate-example",
+    title: "围绕法学研究方法的理论争议及其辨析",
+    author: "胡玉鸿",
+    method: "法学方法论、概念辨析、元研究",
+    question: "法学研究方法是否存在优劣、是否具有独立性、以及如何处理主观性与客观性？",
+    contribution: "把分散的方法争议转化为可讨论的元问题，适合训练学生在写方法部分前先澄清方法立场。",
+    discussion: ["一篇论文的方法选择是否可以被评价为好坏？", "法学方法的客观性来自共同规则，还是来自研究者的价值中立？"],
+    citation: "胡玉鸿：《围绕法学研究方法的理论争议及其辨析》，《政法论坛》2023年第3期。",
+    url: "https://www.cssn.cn/fx/xzyc/202310/t20231020_5692056.shtml"
+  },
+  {
+    id: "zhang-cheng-method-coordinate-example",
+    title: "法律实证研究的方法坐标",
+    author: "张永健、程金华",
+    method: "实证研究、类型学、方法定位",
+    question: "法律实证研究与社科法学、实证法学、法教义学之间究竟如何区分？",
+    contribution: "用研究主题和研究方法两个维度建立坐标系，帮助读者定位不同法律经验研究的类型。",
+    discussion: ["同样使用数据的论文为什么可能属于不同范式？", "方法坐标如何帮助学生避免“实证”概念泛化？"],
+    citation: "张永健、程金华：《法律实证研究的方法坐标》，《中国法律评论》2018年第6期。",
+    url: "https://static.ilawpress.com/lpdpres/html/302596831303434752.html"
+  },
+  {
+    id: "cheng-scientific-empirical-example",
+    title: "迈向科学的法律实证研究",
+    author: "程金华",
+    method: "实证研究、方法论批评、研究质量审计",
+    question: "中国法律实证研究为什么需要在论题、理论和技术上同时改进？",
+    contribution: "把实证研究质量问题拆成可检查的维度，帮助学生识别数据堆积和因果叙事的薄弱处。",
+    discussion: ["实证研究最常见的技术缺陷是什么？", "理论故事为什么不是实证研究的装饰，而是研究设计的一部分？"],
+    citation: "程金华：《迈向科学的法律实证研究》，《清华法学》2018年第4期。",
+    url: "http://www.socio-legal.sjtu.edu.cn/Download/Download.aspx?Guid=6fcd74e243a640fb9fb1480499d84f18"
+  },
+  {
+    id: "he-judgment-documents-example",
+    title: "法学研究中裁判文书运用的方法论检讨",
+    author: "何挺",
+    method: "内容分析、裁判文书研究、方法论检讨",
+    question: "刑事法学论文使用裁判文书时，在哪些环节容易产生样本、抽样和结论适用问题？",
+    contribution: "以既有文献为研究对象，展示如何反向审计一个研究领域的数据使用规范。",
+    discussion: ["裁判文书上网是否意味着可以直接代表司法实践？", "内容分析法如何检查一组法学文献的方法质量？"],
+    citation: "何挺：《法学研究中裁判文书运用的方法论检讨》，《法学研究》2022年第3期。",
+    url: "https://cacpl.chinalaw.org.cn/portal/article/index/id/6644.html"
+  },
+  {
+    id: "xiong-judgment-data-example",
+    title: "基于裁判文书数据的法实证研究方法",
+    author: "熊丙万、王军乐",
+    method: "裁判文书数据、信息抽取、规范问题驱动的实证研究",
+    question: "如何以“知假买假”为规范问题，构建能够服务法学判断的裁判文书数据研究？",
+    contribution: "示范从规范问题到概念拆解、信息抽取、数据分析、结论限定的完整法实证研究循环。",
+    discussion: ["为什么法实证研究不能从数据开始，而要从规范问题开始？", "裁判文书数据质量如何影响结论边界？"],
+    citation: "熊丙万、王军乐：《基于裁判文书数据的法实证研究方法》，《经贸法律评论》2023年第6期。",
+    url: "https://law.uibe.edu.cn/xzkw/gk/2023nd6q/2bc9949139dc41b4b4939309f3c8335d.htm"
+  },
+  {
+    id: "qu-judgment-review-example",
+    title: "基于裁判文书的法学实证研究之审视",
+    author: "屈茂辉",
+    method: "知识图谱、文献计量、裁判文书研究评估",
+    question: "以裁判文书为基础的法学实证研究在中国呈现怎样的发展和局限？",
+    contribution: "用知识图谱和文献梳理方法审视一个方法潮流本身，是研究综述与方法批评结合的范例。",
+    discussion: ["知识图谱能说明哪些问题，不能说明哪些问题？", "为什么方法热潮可能带来题材集中和数据依赖？"],
+    citation: "屈茂辉：《基于裁判文书的法学实证研究之审视》，《现代法学》2020年第3期。",
+    url: "https://qks.swupl.edu.cn/docs/2020-06/20200620214716351315.pdf"
+  },
+  {
+    id: "chen-baifeng-mechanism-example",
+    title: "法律经验研究的机制分析方法",
+    author: "陈柏峰",
+    method: "质性研究、机制分析、田野材料",
+    question: "法律经验研究如何从田野材料中识别机制，而不是停留在现象描述？",
+    contribution: "提出经验饱和、因果链条和机制解释等要求，使质性研究具有更强解释力。",
+    discussion: ["经验质感如何转化为学术命题？", "机制分析与一般描述性田野笔记有什么不同？"],
+    citation: "陈柏峰：《法律经验研究的机制分析方法》，《法商研究》2016年第4期。",
+    url: "https://zgfxqk.chinalaw.org.cn/portal/article/index/id/2047.html"
+  },
+  {
+    id: "han-socio-legal-method-example",
+    title: "各归其位：“社会—法律研究”方法的展开",
+    author: "韩宝",
+    method: "社科法学、范式辨析、比较方法",
+    question: "社会—法律研究与法教义学是否必然竞争，还是可以各自承担不同知识任务？",
+    contribution: "通过范式辨析和比较，帮助学生理解法律社会科学研究的边界与定位。",
+    discussion: ["社科法学何时会越界替代规范判断？", "法教义学何时需要社会科学材料补充？"],
+    citation: "韩宝：《各归其位：“社会—法律研究”方法的展开》，《厦门大学法律评论》2017年第30期，第21-54页。",
+    url: "http://www.socio-legal.sjtu.edu.cn/wxzy/info.aspx?itemid=3737&lcid=30"
+  },
+  {
+    id: "lin-constitutional-method-example",
+    title: "中国宪法学研究方法评辨",
+    author: "林来梵",
+    method: "部门法方法论、规范宪法学、方法史评述",
+    question: "中国宪法学方法为什么在政治法学、规范宪法学和社会科学化之间摇摆？",
+    contribution: "以一个部门法为对象展示如何评估学科方法史和未来方法选择。",
+    discussion: ["宪法学为什么特别容易受到政治、规范和社会科学三种方法拉扯？", "部门法方法论是否应当服从一般法学方法论？"],
+    citation: "林来梵：《中国宪法学研究方法评辨：过去、现在与未来》。",
+    url: "https://www.tsinghua.edu.cn/info/1662/110179.htm"
+  },
+  {
+    id: "yu-admin-case-method-example",
+    title: "行政法案例分析的基本方法",
+    author: "余凌云",
+    method: "行政法案例分析、三步分析法、法教义学",
+    question: "行政法案例分析应如何组织事实、规范和争点，而不只是讲述案情？",
+    contribution: "提出事实梳理、规范检索和争议分析三步结构，适合学生练习部门法案例写作。",
+    discussion: ["行政法案例分析能否直接套用民法请求权基础方法？", "案例分析何时可以从解释论走向立法论？"],
+    citation: "余凌云：《行政法案例分析的基本方法》。",
+    url: "https://www.law.tsinghua.edu.cn/info/1036/20102.htm"
+  },
+  {
+    id: "zhao-guiding-cases-example",
+    title: "法律方法在指导性案例中的运用研究",
+    author: "赵梦闪",
+    method: "指导性案例、文本分析、法律方法应用",
+    question: "最高人民法院指导性案例如何实际运用法律发现、解释、原则和漏洞填补等方法？",
+    contribution: "以178个指导案例为文本，展示如何把案例群作为法律方法研究对象。",
+    discussion: ["指导性案例中的“裁判要点”能否被视为规则？", "案例群研究如何避免只作分类统计？"],
+    citation: "赵梦闪：《法律方法在指导性案例中的运用研究——以178个指导案例为文本的考察》，东方法学微信公众号2023年11月9日，澎湃新闻转载。",
+    url: "https://www.thepaper.cn/newsDetail_forward_25236025"
+  },
+  {
+    id: "zheng-cross-research-example",
+    title: "法律的“交叉”研究和应用的原理",
+    author: "郑永流",
+    method: "交叉学科、法教义学与非教义学整合、理论构建",
+    question: "为什么法学本身具有内在交叉性，且需要教义学与非教义学知识并存？",
+    contribution: "从法律正当性和制定法动态性出发，给出交叉研究的法理学基础。",
+    discussion: ["交叉研究是外部学科进入法律，还是法学内部知识结构的要求？", "教义学和非教义学知识如何在同一论文中分工？"],
+    citation: "郑永流：《法律的“交叉”研究和应用的原理》，《中国法学》2018年第4期，第124-139页。",
+    url: "https://clsjp.chinalaw.org.cn/portal/article/index/id/9646.html"
+  },
+  {
+    id: "wang-dogmatics-interpretive-example",
+    title: "从法教义学迈向法释义学",
+    author: "王利明",
+    method: "法教义学、法释义学、概念重构",
+    question: "中国法学是否应照搬德国法教义学，还是应构建更适合本土语境的法释义学？",
+    contribution: "以概念批评和体系构建方式讨论中国自主法释义学，是部门法方法论重构的范例。",
+    discussion: ["方法概念的名称会不会影响研究实践？", "本土化方法论如何避免只是换名不换内容？"],
+    citation: "王利明：《从法教义学迈向法释义学》，《法学家》2025年第4期。",
+    url: "https://www.civillaw.com.cn/t/?id=40124"
+  },
+  {
+    id: "lei-xinhong-empirical-evolution-example",
+    title: "方法论演进视野下的中国法律实证研究",
+    author: "雷鑫洪",
+    method: "实证研究、文献计量、可视化分析、方法史",
+    question: "中国法律实证研究在2000年以来如何增长、分布，并暴露出哪些方法论瓶颈？",
+    contribution: "以文献数据库为材料，把方法史问题转化为可计量、可视化的研究对象，适合拆解综述型实证研究。",
+    discussion: ["用知网文献计量研究方法史时，样本选择会带来哪些偏差？", "数量增长是否足以说明一个研究范式成熟？"],
+    citation: "雷鑫洪：《方法论演进视野下的中国法律实证研究》，《法学研究》2017年第4期。",
+    url: "https://faxueyanjiu.ajcass.com/Admin/UploadFile/publish_article/2017/4/20170406.pdf"
+  },
+  {
+    id: "bai-criminal-dogmatics-empirical-example",
+    title: "论刑法教义学与实证研究",
+    author: "白建军",
+    method: "刑法教义学、实证研究、规范与事实整合",
+    question: "刑法教义学与刑法实证研究是否必然分属两套不能沟通的方法？",
+    contribution: "以死刑适用和刑法有效性等问题为连接点，展示教义分析与大样本经验判断可以在实践理性中相遇。",
+    discussion: ["实证材料能否直接修正刑法教义？", "没有教义学约束的刑法实证研究会失去哪些法学意义？"],
+    citation: "白建军：《论刑法教义学与实证研究》，《法学研究》2021年第3期。",
+    url: "https://www.socio-legal.sjtu.edu.cn/wxzy/info.aspx?itemid=3994"
+  },
+  {
+    id: "jin-civil-empirical-dogmatics-example",
+    title: "民法实证研究方法与民法教义学",
+    author: "金可可",
+    method: "民法教义学、实证研究、方法边界",
+    question: "民法研究中，观察、调查和统计等实证方法应当如何服务而不是替代教义学判断？",
+    contribution: "用较短篇幅集中说明经验材料进入民法论证的可能性和限制，适合训练方法说明的边界感。",
+    discussion: ["民法教义学为什么需要经验事实？", "经验研究结论何时只能作为背景事实，不能直接推出规范结论？"],
+    citation: "金可可：《民法实证研究方法与民法教义学》，《法学研究》2012年第1期，第48-50页。",
+    url: "https://sns.wanfangdata.com.cn/perio/fxyj?issueNum=1&publishYear=2012&tabId=article"
+  },
+  {
     id: "zhang-algorithm-power-example",
     title: "算法权力的兴起、异化及法律规制",
     author: "张凌寒",
@@ -1625,8 +2098,8 @@ export const additionalExercises: Exercise[] = [
 
 export const topicAssociations: Record<string, TopicAssociation> = {
   "nature-purpose": {
-    resourceIds: ["chynoweth-legal-research", "苏力-也许正在发生", "holmes-path", "galanter-haves", "陈瑞华-论法学研究方法", "gestel-micklitz-methods", "强世功-法律人的城邦"],
-    exampleIds: ["holmes-path-example", "suli-happening-example", "galanter-haves-example", "chen-research-method-example"],
+    resourceIds: ["chynoweth-legal-research", "苏力-也许正在发生", "holmes-path", "galanter-haves", "陈瑞华-论法学研究方法", "陈瑞华-第三条道路", "胡玉鸿-研究方法争议", "雷磊-法学方法论观察反思", "陈兴良-法学知识演进分化", "gestel-micklitz-methods", "强世功-法律人的城邦"],
+    exampleIds: ["holmes-path-example", "suli-happening-example", "galanter-haves-example", "chen-research-method-example", "hu-yuhong-method-debate-example"],
     exerciseIds: ["source-triangulation", "article-anatomy", "method-section-audit", "chinese-method-debate-map"]
   },
   "thinking-methods": {
@@ -1635,23 +2108,23 @@ export const topicAssociations: Record<string, TopicAssociation> = {
     exerciseIds: ["theory-debate-map", "abstract-rewrite-lab", "method-section-audit"]
   },
   "research-question-hypothesis": {
-    resourceIds: ["felstiner-naming-blaming", "mnookin-shadow-law", "heise-empirical-legal-scholarship", "sheehy-paradigms", "gestel-micklitz-methods", "陈瑞华-论法学研究方法", "侯猛-实证包装法学"],
-    exampleIds: ["felstiner-disputes-example", "mnookin-shadow-example", "epstein-king-example", "chen-research-method-example", "hou-empirical-packaging-example"],
+    resourceIds: ["felstiner-naming-blaming", "mnookin-shadow-law", "heise-empirical-legal-scholarship", "sheehy-paradigms", "gestel-micklitz-methods", "陈瑞华-论法学研究方法", "陈瑞华-第三条道路", "侯猛-实证包装法学", "张永健程金华-法律实证研究方法坐标", "熊丙万王军乐-裁判文书数据法实证"],
+    exampleIds: ["felstiner-disputes-example", "mnookin-shadow-example", "epstein-king-example", "chen-research-method-example", "hou-empirical-packaging-example", "zhang-cheng-method-coordinate-example", "xiong-judgment-data-example"],
     exerciseIds: ["article-anatomy", "chinese-article-reverse-engineering", "method-section-audit"]
   },
   "literature-review": {
-    resourceIds: ["chynoweth-legal-research", "sheehy-paradigms", "taekema-rule-of-law-methods", "carefully-tailored-doctrinal", "苏力-也许正在发生", "hutchinson-duncan-doctrinal", "gestel-micklitz-methods", "侯猛-实证包装法学", "左卫民-范式革命"],
-    exampleIds: ["carefully-tailored-example", "suli-happening-example", "barocas-disparate-example", "hutchinson-doctrinal-example", "hou-empirical-packaging-example"],
+    resourceIds: ["chynoweth-legal-research", "sheehy-paradigms", "taekema-rule-of-law-methods", "carefully-tailored-doctrinal", "苏力-也许正在发生", "hutchinson-duncan-doctrinal", "gestel-micklitz-methods", "侯猛-实证包装法学", "左卫民-范式革命", "雷磊-法学方法论观察反思", "雷鑫洪-方法论演进中国法律实证研究", "陈柏峰-法律实证研究兴起分化", "屈茂辉-裁判文书实证审视", "何挺-裁判文书方法论检讨", "林来梵-宪法学研究方法评辨"],
+    exampleIds: ["carefully-tailored-example", "suli-happening-example", "barocas-disparate-example", "hutchinson-doctrinal-example", "hou-empirical-packaging-example", "lei-xinhong-empirical-evolution-example", "qu-judgment-review-example", "he-judgment-documents-example", "lin-constitutional-method-example"],
     exerciseIds: ["source-triangulation", "article-anatomy", "ai-citation-verification", "chinese-method-debate-map"]
   },
   argumentation: {
-    resourceIds: ["maccormick-legal-reasoning", "alexy-legal-argumentation", "hart-separation", "fuller-fidelity", "kennedy-form-substance", "schauer-thinking-lawyer", "郑永流-法律方法阶梯", "王泽鉴-法律思维与民法实例"],
-    exampleIds: ["hart-fuller-debate-example", "holmes-path-example", "kennedy-form-substance-example", "schauer-thinking-example"],
+    resourceIds: ["maccormick-legal-reasoning", "alexy-legal-argumentation", "hart-separation", "fuller-fidelity", "kennedy-form-substance", "schauer-thinking-lawyer", "郑永流-法律方法阶梯", "王泽鉴-法律思维与民法实例", "余凌云-行政法案例分析方法", "赵梦闪-指导案例法律方法"],
+    exampleIds: ["hart-fuller-debate-example", "holmes-path-example", "kennedy-form-substance-example", "schauer-thinking-example", "yu-admin-case-method-example", "zhao-guiding-cases-example"],
     exerciseIds: ["theory-debate-map", "abstract-rewrite-lab", "method-section-audit"]
   },
   "doctrinal-method": {
-    resourceIds: ["carefully-tailored-doctrinal", "雷磊-法教义学基本立场", "雷磊-法教义学与法治", "hart-separation", "fuller-fidelity", "hutchinson-duncan-doctrinal", "舒国滢-法学方法论", "王泽鉴-法律思维与民法实例", "王利明-陈金钊-法律解释学"],
-    exampleIds: ["lei-dogmatics-example", "carefully-tailored-example", "hart-fuller-debate-example", "hutchinson-doctrinal-example"],
+    resourceIds: ["carefully-tailored-doctrinal", "雷磊-法教义学基本立场", "雷磊-法教义学与法治", "hart-separation", "fuller-fidelity", "hutchinson-duncan-doctrinal", "舒国滢-法学方法论", "王泽鉴-法律思维与民法实例", "王利明-陈金钊-法律解释学", "王利明-法释义学体系", "邹兵建-法教义学释疑", "白建军-刑法教义学实证研究", "金可可-民法实证研究方法", "余凌云-行政法案例分析方法", "胡敏洁-行政法案例研究方法", "赵梦闪-指导案例法律方法"],
+    exampleIds: ["lei-dogmatics-example", "carefully-tailored-example", "hart-fuller-debate-example", "hutchinson-doctrinal-example", "wang-dogmatics-interpretive-example", "bai-criminal-dogmatics-empirical-example", "jin-civil-empirical-dogmatics-example", "yu-admin-case-method-example", "zhao-guiding-cases-example"],
     exerciseIds: ["chinese-article-reverse-engineering", "theory-doctrine-distinction", "doctrinal-source-log"]
   },
   "comparative-law": {
@@ -1660,23 +2133,23 @@ export const topicAssociations: Record<string, TopicAssociation> = {
     exerciseIds: ["comparative-transplant-debate", "source-triangulation", "comparative-case-selection-lab"]
   },
   "empirical-legal-research": {
-    resourceIds: ["heise-empirical-legal-scholarship", "galanter-haves", "felstiner-naming-blaming", "ellickson-order-without-law", "mnookin-shadow-law", "ewick-silbey-common-place", "cail2018", "eisenberg-why-empirical", "black-behavior-law", "merry-getting-justice", "feeley-process-punishment", "白建军-法律实证研究方法", "侯猛-实证包装法学", "贺欣-经验地研究法律"],
-    exampleIds: ["galanter-haves-example", "felstiner-disputes-example", "mnookin-shadow-example", "ellickson-order-example", "ewick-silbey-example", "feeley-process-example", "merry-legal-consciousness-example", "bai-empirical-method-example", "hou-empirical-packaging-example"],
+    resourceIds: ["heise-empirical-legal-scholarship", "galanter-haves", "felstiner-naming-blaming", "ellickson-order-without-law", "mnookin-shadow-law", "ewick-silbey-common-place", "cail2018", "eisenberg-why-empirical", "black-behavior-law", "merry-getting-justice", "feeley-process-punishment", "白建军-法律实证研究方法", "侯猛-实证包装法学", "贺欣-经验地研究法律", "张永健程金华-法律实证研究方法坐标", "程金华-迈向科学法律实证研究", "雷鑫洪-方法论演进中国法律实证研究", "陈柏峰-法律实证研究兴起分化", "何挺-裁判文书方法论检讨", "熊丙万王军乐-裁判文书数据法实证", "屈茂辉-裁判文书实证审视", "陈柏峰-法律经验研究机制分析", "白建军-刑法教义学实证研究", "金可可-民法实证研究方法"],
+    exampleIds: ["galanter-haves-example", "felstiner-disputes-example", "mnookin-shadow-example", "ellickson-order-example", "ewick-silbey-example", "feeley-process-example", "merry-legal-consciousness-example", "bai-empirical-method-example", "hou-empirical-packaging-example", "zhang-cheng-method-coordinate-example", "cheng-scientific-empirical-example", "lei-xinhong-empirical-evolution-example", "he-judgment-documents-example", "xiong-judgment-data-example", "qu-judgment-review-example", "chen-baifeng-mechanism-example", "bai-criminal-dogmatics-empirical-example", "jin-civil-empirical-dogmatics-example"],
     exerciseIds: ["empirical-coding-protocol", "source-triangulation", "empirical-interview-protocol"]
   },
   "interdisciplinary-law": {
-    resourceIds: ["苏力-法治及其本土资源", "梁治平-清代习惯法", "galanter-haves", "kapczynski-lpe-framework", "ewick-silbey-common-place", "ellickson-order-without-law", "nissenbaum-contextual-integrity", "mertz-language-law-school", "kennedy-legal-education-hierarchy", "black-behavior-law", "feeley-process-punishment", "贺欣-街头研究者", "强世功-法律人的城邦"],
-    exampleIds: ["suli-happening-example", "liang-customary-example", "kapczynski-lpe-example", "ewick-silbey-example", "feeley-process-example", "merry-legal-consciousness-example"],
+    resourceIds: ["苏力-法治及其本土资源", "梁治平-清代习惯法", "galanter-haves", "kapczynski-lpe-framework", "ewick-silbey-common-place", "ellickson-order-without-law", "nissenbaum-contextual-integrity", "mertz-language-law-school", "kennedy-legal-education-hierarchy", "black-behavior-law", "feeley-process-punishment", "贺欣-街头研究者", "强世功-法律人的城邦", "韩宝-社会法律研究方法展开", "陈柏峰-法律经验研究机制分析", "陈柏峰-法律经验研究微观过程", "陈柏峰-法律实证研究兴起分化", "侯猛-社科法学研究格局", "郭栋-法律社会科学研究边界", "郑永流-法律交叉研究原理"],
+    exampleIds: ["suli-happening-example", "liang-customary-example", "kapczynski-lpe-example", "ewick-silbey-example", "feeley-process-example", "merry-legal-consciousness-example", "han-socio-legal-method-example", "chen-baifeng-mechanism-example", "zheng-cross-research-example"],
     exerciseIds: ["comparative-transplant-debate", "empirical-coding-protocol", "empirical-interview-protocol"]
   },
   "types-and-presentation": {
-    resourceIds: ["chynoweth-legal-research", "sheehy-paradigms", "carefully-tailored-doctrinal", "galanter-haves", "barocas-selbst-disparate-impact", "hutchinson-duncan-doctrinal", "gestel-micklitz-methods", "陈瑞华-论法学研究方法"],
-    exampleIds: ["epstein-king-example", "galanter-haves-example", "barocas-disparate-example", "carefully-tailored-example", "hutchinson-doctrinal-example", "chen-research-method-example"],
+    resourceIds: ["chynoweth-legal-research", "sheehy-paradigms", "carefully-tailored-doctrinal", "galanter-haves", "barocas-selbst-disparate-impact", "hutchinson-duncan-doctrinal", "gestel-micklitz-methods", "陈瑞华-论法学研究方法", "胡玉鸿-研究方法争议", "胡玉鸿-法学方法论体系构造", "雷磊-法学方法论观察反思", "陈瑞华-第三条道路", "雷鑫洪-方法论演进中国法律实证研究", "陈柏峰-法律实证研究兴起分化", "白建军-刑法教义学实证研究", "金可可-民法实证研究方法", "何挺-裁判文书方法论检讨"],
+    exampleIds: ["epstein-king-example", "galanter-haves-example", "barocas-disparate-example", "carefully-tailored-example", "hutchinson-doctrinal-example", "chen-research-method-example", "hu-yuhong-method-debate-example", "lei-xinhong-empirical-evolution-example", "bai-criminal-dogmatics-empirical-example", "jin-civil-empirical-dogmatics-example", "he-judgment-documents-example"],
     exerciseIds: ["abstract-rewrite-lab", "article-anatomy", "method-section-audit"]
   },
   "theory-building": {
-    resourceIds: ["holmes-path", "hart-separation", "hart-natural-rights", "fuller-fidelity", "fuller-speluncean", "dworkin-model-rules", "dworkin-hard-cases", "dworkin-law-as-interpretation", "rawls-two-concepts-rules", "rawls-justice-fairness", "rawls-public-reason", "raz-legal-principles", "raz-authority-law-morality", "raz-rule-law-virtue", "finnis-natural-law", "finnis-natural-law-reasoning", "kelsen-pure-theory-analytical", "kelsen-foundations-democracy", "kelsen-natural-law-tribunal", "maccormick-legal-reasoning", "alexy-legal-argumentation", "kennedy-form-substance", "unger-cls-movement", "kapczynski-lpe-framework", "galanter-haves", "black-behavior-law", "frankenberg-critical-comparisons", "mattei-three-patterns", "张文显-部门法哲学引论", "张文显-法学范畴意识", "舒国滢-法学方法论", "舒国滢-抽象法学理论", "雷磊-规范法学发展", "陈景辉-哈特为什么重要", "强世功-法律人的城邦"],
-    exampleIds: ["holmes-path-example", "hart-fuller-debate-example", "kennedy-form-substance-example", "kapczynski-lpe-example", "galanter-haves-example", "schauer-thinking-example"],
+    resourceIds: ["holmes-path", "hart-separation", "hart-natural-rights", "fuller-fidelity", "fuller-speluncean", "dworkin-model-rules", "dworkin-hard-cases", "dworkin-law-as-interpretation", "rawls-two-concepts-rules", "rawls-justice-fairness", "rawls-public-reason", "raz-legal-principles", "raz-authority-law-morality", "raz-rule-law-virtue", "finnis-natural-law", "finnis-natural-law-reasoning", "kelsen-pure-theory-analytical", "kelsen-foundations-democracy", "kelsen-natural-law-tribunal", "maccormick-legal-reasoning", "alexy-legal-argumentation", "kennedy-form-substance", "unger-cls-movement", "kapczynski-lpe-framework", "galanter-haves", "black-behavior-law", "frankenberg-critical-comparisons", "mattei-three-patterns", "张文显-部门法哲学引论", "张文显-法学范畴意识", "舒国滢-法学方法论", "舒国滢-抽象法学理论", "雷磊-规范法学发展", "陈景辉-哈特为什么重要", "胡玉鸿-法学方法论体系构造", "雷磊-法学方法论观察反思", "陈兴良-法学知识演进分化", "郑永流-法律交叉研究原理", "强世功-法律人的城邦"],
+    exampleIds: ["holmes-path-example", "hart-fuller-debate-example", "kennedy-form-substance-example", "kapczynski-lpe-example", "galanter-haves-example", "schauer-thinking-example", "hu-yuhong-method-debate-example", "chen-baifeng-mechanism-example", "zheng-cross-research-example"],
     exerciseIds: ["theory-debate-map", "article-anatomy", "chinese-method-debate-map"]
   },
   "ai-and-legal-research": {
