@@ -1,0 +1,156 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { examples } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+const readingMoves = [
+  { title: "看问题", text: "先找作者真正要回答的问题，而不是只看题目或研究对象。" },
+  { title: "看方法", text: "判断作者依赖的是规范解释、比较、数据、历史材料、理论论战还是混合方法。" },
+  { title: "看贡献", text: "追问文章改变了什么：概念、证据、解释机制、规范评价或制度设计。" },
+];
+
+const anatomy = [
+  { title: "引言", text: "标出作者如何把现实背景、文献空白和研究问题连在一起。" },
+  { title: "方法", text: "找出材料来源、案例选择、解释方法、数据处理或理论框架，而不是只看结论。" },
+  { title: "核心段落", text: "判断每一节是否回答同一个主问题，还是只是展示作者知道很多资料。" },
+  { title: "结论", text: "检查作者是否清楚说明贡献、限制和下一步问题。" },
+];
+
+const attachmentExamples = examples.filter((example) => example.method.includes("课程附件"));
+const libraryExamples = examples.filter((example) => !example.method.includes("课程附件"));
+
+const attachmentStats = [
+  { title: "PDF 附件", text: `${attachmentExamples.length} 篇课程论文与学生范例已经作为站内附件加入。` },
+  { title: "逐篇拆解", text: "每个附件范例都配有研究问题、贡献说明和课堂讨论问题。" },
+  { title: "阅读方式", text: "先读摘要、引言和目录，再回到卡片中的问题检查文章结构。" },
+  { title: "材料用途", text: "这些附件适合训练选题、文献综述、方法说明和论文结构诊断。" },
+  { title: "方法覆盖", text: "范例覆盖教义学、比较法、实证研究、法律科技、公法和公司金融法等路径。" },
+];
+
+const groupedExamples = [
+  { label: "方法论与法律思维", items: libraryExamples.filter((example) => ["法学方法", "方法论", "法律推理", "规则理论", "研究写作"].some((tag) => example.method.includes(tag))) },
+  { label: "理论与法理", items: libraryExamples.filter((example) => ["理论", "法哲学", "批判法学", "法律现实主义"].some((tag) => example.method.includes(tag))) },
+  { label: "教义学与解释", items: libraryExamples.filter((example) => ["教义学", "概念分析", "规范"].some((tag) => example.method.includes(tag))) },
+  { label: "比较法与移植", items: libraryExamples.filter((example) => ["比较法", "法律移植"].some((tag) => example.method.includes(tag))) },
+  { label: "实证与法社会学", items: libraryExamples.filter((example) => ["实证", "法社会学", "田野", "法律意识", "谈判"].some((tag) => example.method.includes(tag))) },
+  { label: "AI 与法律科技", items: libraryExamples.filter((example) => ["AI", "人工智能", "算法", "法律人工智能"].some((tag) => example.method.includes(tag))) },
+].filter((group) => group.items.length > 0);
+---
+
+<BaseLayout title="范例" description="法学研究方法示例阅读">
+  <header class="page-header">
+    <p class="eyebrow">Examples</p>
+    <h1>范例</h1>
+    <p>这些范例包含课程课件中的示例论文、博士论文，以及新增的中英文经典法学论文和专著。它们不是要求学生模仿题目，而是训练学生观察研究问题、方法、贡献和论证结构。</p>
+  </header>
+  <section class="section container">
+    <div class="grid">
+      {readingMoves.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Article Anatomy</p>
+        <h2>范例拆解路径</h2>
+      </div>
+      <p>读范例不是模仿题目，而是逆向还原作者如何把问题、方法、材料和贡献组织成可发表的研究。</p>
+    </div>
+    <div class="grid">
+      {anatomy.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">PDF Attachments</p>
+        <h2>课程 PDF 附件范例</h2>
+      </div>
+      <p>以下论文已经直接加入网站附件目录。每张卡片都按本页其他范例的方式，提示如何识别研究问题、方法贡献和可讨论之处。</p>
+    </div>
+    <div class="matrix sample-paper-matrix">
+      {attachmentStats.map((item) => (
+        <div>
+          <strong>{item.title}</strong>
+          <p>{item.text}</p>
+        </div>
+      ))}
+    </div>
+    <div class="grid two attachment-grid">
+      {attachmentExamples.map((example) => (
+        <article class="example-card attachment-card">
+          <h3>{example.url ? <a href={siteHref(example.url)}>{example.title}</a> : example.title}</h3>
+          <p class="byline">{example.author} · {example.method.replace("课程附件、", "")}</p>
+          <p><strong>研究问题：</strong>{example.question}</p>
+          <p><strong>贡献：</strong>{example.contribution}</p>
+          <p class="citation">{example.citation}</p>
+          {example.url && (
+            <div class="action-row compact">
+              <a class="button secondary" href={siteHref(example.url)} target="_blank" rel="noreferrer">打开 PDF 附件</a>
+            </div>
+          )}
+          <h3>讨论问题</h3>
+          <ul>
+            {example.discussion.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container article-stack">
+    {groupedExamples.map((group) => (
+      <article class="article-section">
+        <h2>{group.label}</h2>
+        <div class="grid two">
+          {group.items.map((example) => (
+            <article class="example-card">
+              <h3>{example.url ? <a href={siteHref(example.url)}>{example.title}</a> : example.title}</h3>
+              <p class="byline">{example.author} · {example.method}</p>
+              <p><strong>研究问题：</strong>{example.question}</p>
+              <p><strong>贡献：</strong>{example.contribution}</p>
+              <p class="citation">{example.citation}</p>
+              <h3>讨论问题</h3>
+              <ul>
+                {example.discussion.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </article>
+    ))}
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Selected Examples</p>
+        <h2>全部精选范例</h2>
+      </div>
+      <p>上方已单列 PDF 附件范例。这里保留课程原有和后续补充的精选范例，可用于拆解论文结构或设计自己的研究计划。</p>
+    </div>
+    <div class="grid two">
+      {libraryExamples.map((example) => (
+        <article class="example-card">
+          <h3>{example.url ? <a href={siteHref(example.url)}>{example.title}</a> : example.title}</h3>
+          <p class="byline">{example.author} · {example.method}</p>
+          <p><strong>研究问题：</strong>{example.question}</p>
+          <p><strong>贡献：</strong>{example.contribution}</p>
+          <p class="citation">{example.citation}</p>
+          <h3>讨论问题</h3>
+          <ul>
+            {example.discussion.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

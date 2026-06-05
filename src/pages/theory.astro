@@ -1,0 +1,135 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { examples, resources, topics } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+const theoryTopic = topics.find((topic) => topic.slug === "theory-building");
+const theoryResources = resources.filter((resource) => resource.tags.some((tag) => ["理论", "理论构建", "理论框架", "法理学", "法哲学", "法律实证主义", "批判法学"].includes(tag)));
+const theoryExamples = examples.filter((example) => ["理论", "法哲学", "批判法学", "法律现实主义"].some((tag) => example.method.includes(tag))).slice(0, 6);
+
+const frameworkChecks = [
+  { title: "不是作者名录", text: "引用 Hart、Dworkin、Alexy 或苏力并不自动构成理论框架，必须说明概念如何解释你的材料。" },
+  { title: "不是价值宣言", text: "公平、效率、自由、秩序只有进入概念关系和评价标准，才会成为可使用的理论工具。" },
+  { title: "不是变量清单", text: "变量之间要有因果、机制、解释或规范评价关系，否则只是资料分类。" },
+  { title: "不是结论包装", text: "理论框架应在研究开始时指导材料选择，也应在结论中接受材料修正。" },
+];
+---
+
+<BaseLayout title="理论" description="法理学法哲学流派及其对法律思维的影响">
+  <header class="page-header">
+    <p class="eyebrow">Theory</p>
+    <h1>理论</h1>
+    <p>理论页帮助学生理解法理学与法哲学并不是独立装饰，而会影响我们如何提出问题、解释材料、评价制度，并在写作中形成可说明的理论框架。</p>
+  </header>
+  <section class="section container">
+    <article class="info-card">
+      <p class="eyebrow">Topic 11</p>
+      <h2>{theoryTopic?.title}</h2>
+      <p>{theoryTopic?.summary}</p>
+      <div class="action-row">
+        <a class="button" href={siteHref("/topics/theory-building")}>进入专题11</a>
+      </div>
+    </article>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">From Theory To Framework</p>
+        <h2>理论进入研究的四个位置</h2>
+      </div>
+      <p>理论框架应当帮助研究者说明为什么这个问题存在、哪些概念重要、概念如何关联，以及研究结论能推广到什么边界内。</p>
+    </div>
+    <div class="matrix">
+      <div><strong>概念</strong><p>定义研究对象，避免用日常语言替代学术概念。</p></div>
+      <div><strong>关系</strong><p>说明概念之间是因果、解释、规范评价还是制度机制。</p></div>
+      <div><strong>假设</strong><p>提出可以被材料支持、修正或推翻的暂定解释。</p></div>
+      <div><strong>边界</strong><p>说明理论适用于何时、何地、何种制度和主体。</p></div>
+      <div><strong>贡献</strong><p>说明你的框架如何改变既有理解，而不只是换一种说法。</p></div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Choosing A Frame</p>
+        <h2>如何选择理论框架</h2>
+      </div>
+      <p>理论框架不是为了显示读过某位大家，而是为了让问题更清楚、材料更有方向、结论更有解释力。</p>
+    </div>
+    <div class="timeline">
+      <div><strong>从 puzzle 出发</strong> 先写出既有教义、政策或经验研究解释不了的现象。</div>
+      <div><strong>挑概念工具</strong> 选择能解释该现象的核心概念，例如权力、效率、程序、法律意识、社会规范或正当性。</div>
+      <div><strong>说明关系</strong> 写清概念之间是因果、功能、规范评价还是制度机制。</div>
+      <div><strong>限定边界</strong> 说明你的框架适用于何种法域、制度、主体和材料。</div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Framework Checks</p>
+        <h2>理论框架的四个反面清单</h2>
+      </div>
+      <p>写理论框架时，最常见的问题不是没有理论词汇，而是理论词汇没有承担解释工作。</p>
+    </div>
+    <div class="grid">
+      {frameworkChecks.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Jurisprudence</p>
+        <h2>主要理论流派</h2>
+      </div>
+      <p>同一法律现象在不同理论框架中会呈现不同问题：效力、正当性、实践、权力、效率或解释完整性。</p>
+    </div>
+    <div class="matrix">
+      <div><strong>法律实证主义</strong><p>关注法律有效性、规则体系和社会事实。</p></div>
+      <div><strong>自然法</strong><p>强调法律与道德、正义和合法性的关系。</p></div>
+      <div><strong>法律现实主义</strong><p>把法律理解为司法实践和制度行为。</p></div>
+      <div><strong>批判法学</strong><p>揭示法律中的权力、意识形态和结构性不平等。</p></div>
+      <div><strong>解释主义</strong><p>通过原则、适合性和正当化理解法律义务。</p></div>
+      <div><strong>法律与政治经济学</strong><p>把市场、国家、权力、民主和分配重新放入法律分析。</p></div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Examples</p>
+        <h2>理论范例</h2>
+      </div>
+    </div>
+    <div class="grid two">
+      {theoryExamples.map((example) => (
+        <article class="example-card">
+          <h3>{example.url ? <a href={siteHref(example.url)}>{example.title}</a> : example.title}</h3>
+          <p class="byline">{example.author} · {example.method}</p>
+          <p><strong>研究问题：</strong>{example.question}</p>
+          <p><strong>贡献：</strong>{example.contribution}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Readings</p>
+        <h2>理论阅读</h2>
+      </div>
+    </div>
+    <div class="grid two">
+      {theoryResources.map((resource) => (
+        <article class="resource-item">
+          <div class="resource-meta"><span>{resource.type}</span><span>{resource.language}</span></div>
+          <h3>{resource.url ? <a href={siteHref(resource.url)}>{resource.title}</a> : resource.title}</h3>
+          <p class="byline">{resource.author}</p>
+          <p>{resource.note}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

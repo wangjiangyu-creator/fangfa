@@ -1,0 +1,150 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { exercises, resources } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+const thinkingExercises = exercises.filter((exercise) => exercise.tags.some((tag) => ["批判性思维", "法律思维", "学术诚信"].includes(tag)));
+const thinkingResources = resources.filter((resource) => resource.tags.some((tag) => ["批判性思维", "法律思维", "论证", "程序法", "法律现实主义", "法律阅读", "法律论辩", "法律逻辑"].includes(tag)));
+
+const diagnostics = [
+  { title: "事实是否可靠", text: "材料来自一手资料、权威文献、数据集还是二手转述？有没有选择性呈现？" },
+  { title: "概念是否清楚", text: "核心概念是法律概念、社会科学概念还是日常词汇？有没有在论证中偷换含义？" },
+  { title: "理由是否分层", text: "支持结论的是文本理由、体系理由、目的理由、经验事实还是价值判断？" },
+  { title: "反例是否真实", text: "有没有认真处理最强反对意见，而不是只反驳一个较弱版本？" },
+];
+
+const thinkingElements = [
+  { title: "目的", text: "先说明为什么思考：作决定、分析制度、沟通观点、提出论证，还是设计解决方案。" },
+  { title: "问题", text: "把问题写得清楚、精确、相关且重要，避免把宽泛主题当作研究问题。" },
+  { title: "信息", text: "检查事实、数据、经验和权威材料是否准确、完整、相关、可验证。" },
+  { title: "推论", text: "说明结论如何从材料中推出，并比较其他可能解释是否更好。" },
+  { title: "假设", text: "标出被默认接受的理论、经验、制度和价值前提，判断它们是否可靠。" },
+  { title: "概念", text: "定义术语，区分相邻概念，说明概念之间的因果、功能或规范关系。" },
+  { title: "观点", text: "追问自己从哪个位置看问题，是否理解对立观点的最强版本。" },
+  { title: "后果", text: "推演结论对规则、制度、当事人和研究贡献的影响。" },
+];
+
+const fallacies = [
+  { title: "障眼法", text: "用相关但不回答主问题的材料转移注意力。" },
+  { title: "稻草人", text: "把对方观点弱化后再反驳，回避真正有力的版本。" },
+  { title: "循环论证", text: "用结论证明结论，或者把待证明的前提当作已成立。" },
+  { title: "人身攻击", text: "攻击说话者身份、动机或品格，而不是回应论证本身。" },
+  { title: "结论推不出", text: "前提即使成立，也不足以推出所主张的结论。" },
+  { title: "虚假因果", text: "把先后发生或相关关系误认为因果关系。" },
+];
+---
+
+<BaseLayout title="思维" description="批判性思维、创造性思维和法律思维方法">
+  <header class="page-header">
+    <p class="eyebrow">Thinking</p>
+    <h1>思维</h1>
+    <p>本页把批判性思维、创造性思维和法律思维作为研究能力训练，而不是抽象口号。</p>
+  </header>
+  <section class="section container content-layout">
+    <div class="article-stack">
+      <article class="article-section">
+        <h2>批判性思维</h2>
+        <p>批判性思维要求学生区分事实、价值、理由、推论和结论，识别确认偏差、选择偏差、情绪化判断和未经检验的假设。它不是否定一切，而是要求每一个结论都能经得起证据、反例、替代解释和不同观点的检查。</p>
+        <p>第2讲把批判性思维落实为写作方式的转变：描述性写作回答 what、where、who、when；批判性写作追问 how、why、理由、证据、限制、不同立场和可辩护结论。</p>
+      </article>
+      <article class="article-section">
+        <h2>创造性思维</h2>
+        <p>创造性思维帮助研究者发现新的问题、新的材料组合和新的理论视角。创造性不是任意想象，而是在已有知识边界处提出更好的问题，并能说明这个问题为什么值得进入公共知识世界。</p>
+        <p>课程特别强调概念化：先定义，再区分、比较、连接。一个看似简单的判断，如“制度更好”“自由更少”“监管有效”，都必须先说明比较标准、概念边界和判断依据。</p>
+      </article>
+      <article class="article-section">
+        <h2>法律思维</h2>
+        <p>法律思维把文本、体系、目的、原则、案例、制度后果和可接受理由放在同一个论证空间中。它特别重视类比、区分、反驳、权威和理由的层级。</p>
+        <p>法律思维不是只会适用三段论，而是在疑难案件和复杂制度问题中说明：事实如何被法律概念组织，规则如何被解释，结论为什么能从材料和理由中推出。</p>
+      </article>
+      <article class="article-section">
+        <h2>描述性写作到批判性写作</h2>
+        <div class="grid two">
+          <article class="info-card">
+            <h3>描述性写作</h3>
+            <p>说明是什么、谁说了什么、何时何地发生、已有文献如何描述背景。它为研究提供材料，但本身还不是论证。</p>
+          </article>
+          <article class="info-card">
+            <h3>批判性写作</h3>
+            <p>解释为什么、如何成立、证据是否充分、相反观点是否有力、限制在哪里，以及结论对法律制度意味着什么。</p>
+          </article>
+        </div>
+      </article>
+      <article class="article-section">
+        <h2>八个思维元素</h2>
+        <p>阅读论文和写论文时，可以把每一节都放进这八个问题中检查。</p>
+        <div class="grid two">
+          {thinkingElements.map((item) => (
+            <article class="info-card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </article>
+      <article class="article-section">
+        <h2>概念化训练</h2>
+        <p>概念化不是给关键词下一个漂亮定义，而是把混乱经验整理成可比较、可争辩、可使用的分析工具。它通常包括观察、抽象、命名、定义、分类、建立关系、应用和修正。</p>
+        <p>在法律研究中，概念化尤其要处理相邻概念之间的差异，例如权利与利益、责任与风险、程序正义与实体正义、合法性与正当性、监管与治理。</p>
+      </article>
+      <article class="article-section">
+        <h2>推理、谬误与论证</h2>
+        <p>推理是有意识地用理由和逻辑走向结论；论证则是把主张、理由、事实、理论和方法组织起来，让读者看到结论为什么值得接受。</p>
+        <div class="grid two">
+          {fallacies.map((item) => (
+            <article class="info-card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </article>
+      <article class="article-section">
+        <h2>训练路径</h2>
+        <div class="timeline">
+          <div><strong>拆分判断</strong> 把一个结论拆成事实、规范、价值和政策后果。</div>
+          <div><strong>制造反例</strong> 改变主体、法域、时间或制度目标，观察结论是否需要收窄。</div>
+          <div><strong>重组问题</strong> 用类比、区分、理论框架或外部学科重新表述问题。</div>
+          <div><strong>写成论证</strong> 把新问题放回法律材料和可接受理由中。</div>
+        </div>
+      </article>
+      <article class="article-section">
+        <h2>思维诊断问题</h2>
+        <div class="grid two">
+          {diagnostics.map((item) => (
+            <article class="info-card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </article>
+      <article class="article-section">
+        <h2>延伸阅读</h2>
+        <div class="resource-list">
+          {thinkingResources.map((resource) => (
+            <article class="resource-item">
+              <div class="resource-meta"><span>{resource.type}</span><span>{resource.language}</span></div>
+              <h3>{resource.url ? <a href={siteHref(resource.url)}>{resource.title}</a> : resource.title}</h3>
+              <p class="byline">{resource.author}</p>
+              <p>{resource.note}</p>
+            </article>
+          ))}
+        </div>
+      </article>
+    </div>
+    <aside class="sidebar">
+      <div class="side-card">
+        <h3>关联专题</h3>
+        <a href={siteHref("/topics/thinking-methods")}>专题2：思维方法</a>
+        <a href={siteHref("/topics/argumentation")}>专题5：论证方法</a>
+        <a href={siteHref("/topics/theory-building")}>专题11：理论构建</a>
+        <a href={siteHref("/topics/ai-and-legal-research")}>专题12：AI 与研究</a>
+      </div>
+      <div class="side-card">
+        <h3>练习</h3>
+        {thinkingExercises.map((exercise) => <a href={siteHref("/exercises")}>{exercise.title}</a>)}
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

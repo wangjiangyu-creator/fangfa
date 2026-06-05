@@ -1,0 +1,97 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TopicCard from "@/components/TopicCard.astro";
+import { examples, exercises, resources, topics } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+const featuredTopics = topics.slice(0, 6);
+const siteNotice = "本网站由香港城市大学法律学院王江雨教授利用Codex创建，仅服务于其本人的教学研究目的";
+---
+
+<BaseLayout title="课程中心" description="法律研究与思维方法课程网站首页">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Legal Research Methodology</p>
+      <h1>法律研究与思维方法</h1>
+      <p class="site-notice hero-notice">{siteNotice}</p>
+      <p class="hero-copy">
+        以研究问题为发动机，把批判性思维、法教义学、比较法、实证研究、理论构建、AI 辅助与交叉方法组织成一套可练习的法律研究路径。
+      </p>
+      <div class="hero-actions">
+        <a class="button" href={siteHref("/topics")}>进入专题地图</a>
+        <a class="button secondary" href={siteHref("/topics/theory-building")}>查看专题11：理论构建</a>
+        <a class="button secondary" href={siteHref("/topics/ai-and-legal-research")}>专题12：AI 与研究</a>
+      </div>
+    </div>
+    <div class="method-board" aria-label="研究流程">
+      <div class="method-node">
+        <strong>1. 从兴趣到问题</strong>
+        <p>限定法域、主体、制度、证据和可回答范围。</p>
+      </div>
+      <div class="method-node">
+        <strong>2. 从问题到方法</strong>
+        <p>决定需要文本解释、比较、数据、理论还是混合方法。</p>
+      </div>
+      <div class="method-node">
+        <strong>3. 从方法到贡献</strong>
+        <p>用证据、论证和反驳说明你的研究改变了什么。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Topics</p>
+        <h2>课程专题地图</h2>
+      </div>
+      <p>12 个专题从研究的性质、问题、综述、论证和方法一路推进到理论构建与 AI 法学研究。</p>
+    </div>
+    <div class="grid">
+      {featuredTopics.map((topic) => <TopicCard topic={topic} compact />)}
+    </div>
+    <div class="action-row">
+      <a class="button secondary" href={siteHref("/topics")}>查看全部 12 个专题</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Method Matrix</p>
+        <h2>方法矩阵</h2>
+      </div>
+      <p>同一个法律问题可以用不同方法进入；关键是说明每种方法回答问题的哪一部分。</p>
+    </div>
+    <div class="matrix">
+      <div><strong>法教义学</strong><p>法律是什么，如何解释和适用。</p></div>
+      <div><strong>比较法</strong><p>制度如何在不同法域中承担功能。</p></div>
+      <div><strong>实证研究</strong><p>法律在现实中如何运行并产生效果。</p></div>
+      <div><strong>理论构建</strong><p>概念、假设、机制、边界条件与贡献。</p></div>
+      <div><strong>AI 辅助</strong><p>发现问题、核验资料、审计偏见。</p></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="grid two">
+      <article class="info-card">
+        <p class="eyebrow">Reading</p>
+        <h2>文献入口</h2>
+        <p>已录入 {resources.length} 条中英文文献，覆盖研究方法、理论构建、法理学、比较法、实证法学、AI 治理和中文法学代表性文章。</p>
+        <div class="action-row"><a class="button secondary" href={siteHref("/resources")}>打开文献库</a></div>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Examples</p>
+        <h2>范例入口</h2>
+        <p>已整理 {examples.length} 个研究范例，用来拆解研究问题、方法选择、理论框架、材料使用和贡献表达。</p>
+        <div class="action-row"><a class="button secondary" href={siteHref("/examples")}>打开范例库</a></div>
+      </article>
+      <article class="info-card">
+        <p class="eyebrow">Practice</p>
+        <h2>练习入口</h2>
+        <p>已准备 {exercises.length} 个课堂练习，包括偏见识别、问题细化、文献地图、论证链条、理论框架构建和 AI 问题审计。</p>
+        <div class="action-row"><a class="button secondary" href={siteHref("/exercises")}>进入练习库</a></div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

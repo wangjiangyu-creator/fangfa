@@ -1,0 +1,94 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { examples, resources, topics } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+const theoryTopic = topics.find((topic) => topic.slug === "theory-building");
+const aiTopic = topics.find((topic) => topic.slug === "ai-and-legal-research");
+const interdisciplinaryResources = resources.filter((resource) => resource.tags.some((tag) => ["交叉学科", "法经济学", "法社会学", "理论框架", "理论构建", "人工智能"].includes(tag)));
+const interdisciplinaryExamples = examples.filter((example) => ["法社会学", "法经济学", "法律与政治经济学", "法律意识", "田野", "谈判", "法律人工智能"].some((tag) => example.method.includes(tag))).slice(0, 8);
+
+const disciplineChecks = [
+  { title: "外部概念回答什么", text: "经济学解释激励，社会学解释实践和组织，政治学解释权力，历史学解释变迁；先说清它们各自回答哪一部分。" },
+  { title: "材料是否跟得上", text: "使用社会科学概念时，需要相应的访谈、数据、档案、组织材料或制度实践，不能只借术语。" },
+  { title: "法律问题是否还在", text: "交叉研究最后仍要回到法律概念、权利义务、制度安排或规范评价。" },
+  { title: "边界是否诚实", text: "外部学科能解释机制，不一定能直接给出规范答案；法律结论仍需要独立论证。" },
+];
+---
+
+<BaseLayout title="交叉" description="涉及法学的交叉学科">
+  <header class="page-header">
+    <p class="eyebrow">Interdisciplinary</p>
+    <h1>交叉</h1>
+    <p>交叉学科不是离开法学，而是为法律问题引入可解释现实、制度和行为的外部工具。</p>
+  </header>
+  <section class="section container">
+    <div class="grid">
+      <article class="info-card"><h2>法社会学</h2><p>研究法律在社会结构、组织、社区和日常实践中的运行，需要访谈、观察、档案或制度实践材料。</p></article>
+      <article class="info-card"><h2>法经济学</h2><p>用激励、效率、交易成本和风险分配分析法律制度，但要说明效率标准和分配后果。</p></article>
+      <article class="info-card"><h2>法律与政治</h2><p>关注国家、权力、制度选择和法律实施的政治条件，适合研究监管、司法改革和宪制结构。</p></article>
+      <article class="info-card"><h2>法律史</h2><p>通过制度变迁、档案和思想史理解法律概念的形成，避免把当代概念直接投射到历史材料。</p></article>
+      <article class="info-card"><h2>法律与科技</h2><p>讨论数据、平台、自动化决策和技术治理的法律问题，需要同时理解技术机制和规范框架。</p></article>
+      <article class="info-card"><h2>法律与政治经济学</h2><p>分析市场、国家、权力和分配如何通过法律共同塑造，适合公司法、劳动法、平台治理和监管研究。</p></article>
+      <article class="info-card"><h2>理论框架</h2><p>{theoryTopic?.summary}</p><div class="action-row"><a class="button secondary" href={siteHref("/topics/theory-building")}>进入专题11</a></div></article>
+      <article class="info-card"><h2>AI 与法学研究</h2><p>{aiTopic?.summary}</p><div class="action-row"><a class="button secondary" href={siteHref("/topics/ai-and-legal-research")}>进入专题12</a></div></article>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div><p class="eyebrow">Method Choice</p><h2>交叉研究的判断表</h2></div>
+      <p>选择交叉方法时，先确认外部学科到底帮助你解释什么，而不是先选择一个时髦标签。</p>
+    </div>
+    <div class="matrix">
+      <div><strong>解释行为</strong><p>用法社会学、组织社会学或心理学解释法律主体如何行动。</p></div>
+      <div><strong>解释激励</strong><p>用法经济学解释成本、风险、信息和交易结构。</p></div>
+      <div><strong>解释权力</strong><p>用政治学或政治经济学解释制度选择和资源分配。</p></div>
+      <div><strong>解释变迁</strong><p>用法律史和思想史说明概念如何形成、断裂和重组。</p></div>
+      <div><strong>解释技术</strong><p>用科技研究和数据治理框架说明平台、算法和模型如何改变法律关系。</p></div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div><p class="eyebrow">Discipline Checks</p><h2>交叉方法的四个检查</h2></div>
+      <p>一个交叉研究是否成立，取决于外部学科是否真正改善了法律问题的解释力。</p>
+    </div>
+    <div class="grid">
+      {disciplineChecks.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div><p class="eyebrow">Examples</p><h2>交叉范例</h2></div>
+    </div>
+    <div class="grid two">
+      {interdisciplinaryExamples.map((example) => (
+        <article class="example-card">
+          <h3>{example.url ? <a href={siteHref(example.url)}>{example.title}</a> : example.title}</h3>
+          <p class="byline">{example.author} · {example.method}</p>
+          <p><strong>研究问题：</strong>{example.question}</p>
+          <p><strong>贡献：</strong>{example.contribution}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div><p class="eyebrow">Readings</p><h2>交叉阅读</h2></div>
+    </div>
+    <div class="grid two">
+      {interdisciplinaryResources.map((resource) => (
+        <article class="resource-item">
+          <div class="resource-meta"><span>{resource.type}</span><span>{resource.language}</span></div>
+          <h3>{resource.url ? <a href={siteHref(resource.url)}>{resource.title}</a> : resource.title}</h3>
+          <p class="byline">{resource.author}</p>
+          <p>{resource.note}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

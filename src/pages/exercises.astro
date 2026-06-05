@@ -1,0 +1,129 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { exercises, topics } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+const theoryTopic = topics.find((topic) => topic.slug === "theory-building");
+const aiTopic = topics.find((topic) => topic.slug === "ai-and-legal-research");
+const exerciseGroups = [
+  { label: "问题与文献", tags: ["研究问题", "文献综述", "中文文献", "范例阅读"], text: "把兴趣变成问题，并把文献读成争议地图。" },
+  { label: "方法与材料", tags: ["研究设计", "比较法", "实证研究", "数据"], text: "选择适合问题的材料和方法，写清推论边界。" },
+  { label: "理论与论证", tags: ["理论构建", "法理学", "论证", "写作"], text: "把概念、理由、反驳和贡献组织成可写作结构。" },
+  { label: "AI 与诚信", tags: ["人工智能", "学术诚信"], text: "把 AI 当作需要审计的辅助工具，而不是答案来源。" },
+].map((group) => ({
+  ...group,
+  items: exercises.filter((exercise) => exercise.tags.some((tag) => group.tags.includes(tag))),
+})).filter((group) => group.items.length > 0);
+
+const useCases = [
+  { title: "课前准备", text: "让学生先完成资料核验、文献矩阵或范例拆解，课堂上集中讨论方法选择。" },
+  { title: "课堂工作坊", text: "用比较法案例选择、论证链条、访谈提纲等练习，让学生现场互评。" },
+  { title: "课后推进", text: "把课堂产出改写为研究计划的方法段、摘要、理论框架或算法治理备忘录。" },
+];
+---
+
+<BaseLayout title="练习" description="研究方法和法律思维练习材料">
+  <header class="page-header">
+    <p class="eyebrow">Practice</p>
+    <h1>练习</h1>
+    <p>练习页把课堂活动整理为可交付的小任务，帮助学生从阅读走向自己的研究计划。</p>
+  </header>
+  <section class="section container">
+    <div class="timeline">
+      <div><strong>发现问题</strong> 从兴趣、事实和争议中提炼研究问题。</div>
+      <div><strong>核验材料</strong> 建立文献矩阵，辨认空白和偏见。</div>
+      <div><strong>选择方法</strong> 在教义学、比较法、实证、理论框架和 AI 辅助之间作出说明。</div>
+      <div><strong>形成产出</strong> 写出研究陈述、摘要、方法段落和论证链。</div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="grid">
+      {exerciseGroups.map((group) => (
+        <article class="info-card">
+          <h2>{group.label}</h2>
+          <p>{group.text}</p>
+          <p>{group.items.length} 个练习</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Teaching Use</p>
+        <h2>练习如何嵌入课程</h2>
+      </div>
+      <p>这些练习可以单独布置，也可以组合成研究计划写作的连续过程。</p>
+    </div>
+    <div class="grid">
+      {useCases.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container article-stack">
+    {exerciseGroups.map((group) => (
+      <article class="article-section">
+        <h2>{group.label}</h2>
+        <div class="grid two">
+          {group.items.map((exercise) => (
+            <article class="exercise-card">
+              <h3>{exercise.title}</h3>
+              <p>{exercise.goal}</p>
+              <ol>
+                {exercise.steps.map((step) => <li>{step}</li>)}
+              </ol>
+              <p><strong>产出：</strong>{exercise.output}</p>
+              <div class="tag-row">
+                {exercise.tags.map((tag) => <span>{tag}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </article>
+    ))}
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">All Exercises</p>
+        <h2>全部练习</h2>
+      </div>
+      <p>完整练习库便于按课堂节奏自由组合。</p>
+    </div>
+    <div class="grid two">
+      {exercises.map((exercise) => (
+        <article class="exercise-card">
+          <h3>{exercise.title}</h3>
+          <p>{exercise.goal}</p>
+          <ol>
+            {exercise.steps.map((step) => <li>{step}</li>)}
+          </ol>
+          <p><strong>产出：</strong>{exercise.output}</p>
+          <div class="tag-row">
+            {exercise.tags.map((tag) => <span>{tag}</span>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <article class="info-card">
+      <p class="eyebrow">Theory Practice</p>
+      <h2>{theoryTopic?.title}</h2>
+      <p>{theoryTopic?.researchPrompt}</p>
+      <div class="action-row"><a class="button" href={siteHref("/topics/theory-building")}>进入专题11</a></div>
+    </article>
+  </section>
+  <section class="section container">
+    <article class="info-card">
+      <p class="eyebrow">AI Practice</p>
+      <h2>{aiTopic?.title}</h2>
+      <p>{aiTopic?.researchPrompt}</p>
+      <div class="action-row"><a class="button" href={siteHref("/topics/ai-and-legal-research")}>进入专题12</a></div>
+    </article>
+  </section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import type { Resource } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+interface Props {
+  resources: Resource[];
+}
+
+const { resources } = Astro.props;
+---
+
+<div class="resource-list">
+  {resources.map((resource) => (
+    <article class="resource-item">
+      <div class="resource-meta">
+        <span>{resource.type}</span>
+        <span>{resource.language}</span>
+      </div>
+      <h3>
+        {resource.url ? <a href={siteHref(resource.url)}>{resource.title}</a> : resource.title}
+      </h3>
+      <p class="byline">{resource.author}</p>
+      <p>{resource.note}</p>
+      <p class="citation">{resource.citation}</p>
+      <div class="tag-row">
+        {resource.tags.map((tag) => <span>{tag}</span>)}
+      </div>
+    </article>
+  ))}
+</div>

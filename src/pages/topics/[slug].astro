@@ -1,0 +1,174 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ResourceList from "@/components/ResourceList.astro";
+import { examples, exercises, getExampleById, getExerciseById, getResourceById, resources, topics } from "@/content/courseData";
+import { siteHref } from "@/utils/siteHref";
+
+export function getStaticPaths() {
+  return topics.map((topic) => ({
+    params: { slug: topic.slug },
+    props: { topic },
+  }));
+}
+
+const { topic } = Astro.props;
+const topicResources = topic.resourceIds.map(getResourceById).filter(Boolean);
+const topicExamples = topic.exampleIds.map(getExampleById).filter(Boolean);
+const topicExercises = topic.exerciseIds.map(getExerciseById).filter(Boolean);
+const previous = topics.find((item) => item.number === topic.number - 1);
+const next = topics.find((item) => item.number === topic.number + 1);
+const chineseTopicResources = topicResources.filter((resource) => resource.language === "中文");
+const englishTopicResources = topicResources.filter((resource) => resource.language === "英文");
+const researchMoves = [
+  {
+    title: "问题化",
+    text: `先把专题问题改写为可回答的研究问题：${topic.keyQuestion}`,
+  },
+  {
+    title: "材料化",
+    text: `围绕 ${topic.methods.slice(0, 3).join("、")} 选择规范文本、案例、数据、比较材料或理论文献。`,
+  },
+  {
+    title: "贡献化",
+    text: `用 ${topic.concepts.slice(0, 4).join("、")} 说明你的研究准备改变哪一个概念、解释、证据或制度判断。`,
+  },
+];
+---
+
+<BaseLayout title={topic.title} description={topic.summary}>
+  <header class="page-header">
+    <p class="eyebrow">专题 {topic.number}</p>
+    <h1>{topic.title}</h1>
+    <p>{topic.summary}</p>
+  </header>
+
+  <section class="section container content-layout">
+    <div class="article-stack">
+      <article class="article-section">
+        <h2>问题导入</h2>
+        <p>{topic.keyQuestion}</p>
+      </article>
+
+      <article class="article-section">
+        <h2>专题导读</h2>
+        {topic.overview.map((paragraph) => <p>{paragraph}</p>)}
+      </article>
+
+      <article class="article-section">
+        <h2>如何使用本专题</h2>
+        <div class="grid">
+          {researchMoves.map((move) => (
+            <article class="info-card">
+              <h3>{move.title}</h3>
+              <p>{move.text}</p>
+            </article>
+          ))}
+        </div>
+      </article>
+
+      <article class="article-section">
+        <h2>学习目标</h2>
+        <ul>
+          {topic.learningGoals.map((goal) => <li>{goal}</li>)}
+        </ul>
+      </article>
+
+      <article class="article-section">
+        <h2>核心概念</h2>
+        <div class="tag-row">
+          {topic.concepts.map((concept) => <span>{concept}</span>)}
+        </div>
+      </article>
+
+      <article class="article-section">
+        <h2>方法说明</h2>
+        <ul>
+          {topic.methods.map((method) => <li>{method}</li>)}
+        </ul>
+      </article>
+
+      <article class="article-section">
+        <h2>方法展开</h2>
+        <ol>
+          {topic.methodSteps.map((step) => <li>{step}</li>)}
+        </ol>
+      </article>
+
+      <article class="article-section">
+        <h2>常见误区</h2>
+        <ul>
+          {topic.pitfalls.map((pitfall) => <li>{pitfall}</li>)}
+        </ul>
+      </article>
+
+      <article class="article-section">
+        <h2>方法论文献</h2>
+        <p>本专题关联 {topicResources.length} 条文献，其中中文 {chineseTopicResources.length} 条、英文 {englishTopicResources.length} 条。建议先读方法论材料确定研究类型，再用中文文献理解中国法学语境，最后用英文经典扩展理论与比较视野。</p>
+        <ResourceList resources={topicResources} />
+      </article>
+
+      <article class="article-section">
+        <h2>示例阅读</h2>
+        <div class="grid two">
+          {topicExamples.map((example) => (
+            <article class="example-card">
+              <h3>{example.url ? <a href={siteHref(example.url)}>{example.title}</a> : example.title}</h3>
+              <p class="byline">{example.author} · {example.method}</p>
+              <p><strong>研究问题：</strong>{example.question}</p>
+              <p><strong>贡献：</strong>{example.contribution}</p>
+              <p class="citation">{example.citation}</p>
+              <h3>可讨论处</h3>
+              <ul>
+                {example.discussion.map((item) => <li>{item}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </article>
+
+      <article class="article-section">
+        <h2>课堂练习</h2>
+        <div class="grid two">
+          {topicExercises.map((exercise) => (
+            <article class="exercise-card">
+              <h3>{exercise.title}</h3>
+              <p>{exercise.goal}</p>
+              <ol>
+                {exercise.steps.map((step) => <li>{step}</li>)}
+              </ol>
+              <p><strong>产出：</strong>{exercise.output}</p>
+              <div class="tag-row">
+                {exercise.tags.map((tag) => <span>{tag}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </article>
+
+      <article class="article-section">
+        <h2>研究计划提示</h2>
+        <p>{topic.researchPrompt}</p>
+      </article>
+
+      <article class="article-section">
+        <h2>研讨问题</h2>
+        <ol>
+          {topic.seminarQuestions.map((question) => <li>{question}</li>)}
+        </ol>
+      </article>
+    </div>
+
+    <aside class="sidebar">
+      <div class="side-card">
+        <h3>专题导航</h3>
+        {previous && <a href={siteHref(`/topics/${previous.slug}`)}>上一专题：{previous.shortTitle}</a>}
+        {next && <a href={siteHref(`/topics/${next.slug}`)}>下一专题：{next.shortTitle}</a>}
+        <a href={siteHref("/topics")}>返回专题地图</a>
+      </div>
+      <div class="side-card">
+        <h3>关联材料</h3>
+        <p>{topicResources.length} 条文献 · {topicExamples.length} 个范例 · {topicExercises.length} 个练习</p>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

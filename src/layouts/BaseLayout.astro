@@ -1,0 +1,50 @@
+---
+import { navItems } from "@/content/courseData";
+import { routePath, siteHref } from "@/utils/siteHref";
+import "@/styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "法律研究与思维方法课程网站" } = Astro.props;
+const currentPath = routePath(Astro.url.pathname);
+const siteNotice = "本网站由香港城市大学法律学院王江雨教授利用Codex创建，仅服务于其本人的教学研究目的";
+---
+
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title} | 法律研究与思维方法</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={siteHref("/")} aria-label="返回首页">
+        <span class="brand-mark">LR</span>
+        <span>
+          <strong>法律研究与思维方法</strong>
+          <small>Legal Research & Thinking</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        {navItems.map((item) => (
+          <a class:list={[currentPath === item.href && "active"]} href={siteHref(item.href)}>{item.label}</a>
+        ))}
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div>
+        <strong>法律研究与思维方法</strong>
+        <p>以研究问题为发动机，以方法、理论和证据组织法律研究。</p>
+        <p class="site-notice footer-notice">{siteNotice}</p>
+      </div>
+    </footer>
+  </body>
+</html>

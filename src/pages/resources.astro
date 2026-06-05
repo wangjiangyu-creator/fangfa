@@ -1,0 +1,102 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ResourceList from "@/components/ResourceList.astro";
+import { resources } from "@/content/courseData";
+
+const total = resources.length;
+const chineseCount = resources.filter((resource) => resource.language === "中文").length;
+const englishCount = resources.filter((resource) => resource.language === "英文").length;
+
+const readingPath = [
+  { title: "先读方法", text: "用研究方法类文献判断自己的问题属于教义学、比较法、实证、理论还是混合研究。" },
+  { title: "再读范式", text: "用法理学、社科法学、法律与政治经济学等材料确认你的解释框架。" },
+  { title: "最后读范例", text: "回到专题页和范例页，观察经典文章如何把问题、材料和贡献组织成论文。" },
+];
+
+const readingProtocols = [
+  { title: "核验书目信息", text: "中文文献先确认作者、题名、刊物、年份和期次；英文文献优先核对期刊官网、出版社页面、SSRN 或机构库。" },
+  { title: "建立文献矩阵", text: "每篇文献至少记录研究问题、方法、材料、核心概念、贡献和限制，避免只保存摘要。" },
+  { title: "中英文对读", text: "英文经典常提供方法和理论工具，中文文献帮助识别中国法学语境、制度材料和本土争议。" },
+  { title: "回到一手资料", text: "文献不能替代法条、判例、裁判文书、访谈、数据或档案；它们的作用是帮助你提出和组织问题。" },
+];
+
+const grouped = [
+  "法学方法",
+  "法律方法",
+  "研究问题",
+  "文献综述",
+  "法律思维",
+  "法律解释",
+  "论证",
+  "法教义学",
+  "比较法",
+  "实证研究",
+  "法社会学",
+  "法经济学",
+  "理论构建",
+  "理论框架",
+  "理论",
+  "法理学",
+  "法哲学",
+  "批判法学",
+  "法律与政治经济学",
+  "交叉学科",
+  "中国法",
+  "人工智能",
+  "法律与科技",
+].map((tag) => ({
+  tag,
+  items: resources.filter((resource) => resource.tags.includes(tag)),
+})).filter((group) => group.items.length > 0);
+---
+
+<BaseLayout title="文献" description="法律研究方法文献">
+  <header class="page-header">
+    <p class="eyebrow">Readings</p>
+    <h1>文献</h1>
+    <p>这里收录课程文献库：方法论专著、经典期刊论文、中文法学代表性文章、法理学与法哲学文本、比较法、实证法学、交叉学科和 AI 法学材料。英文题名与引文保留原文。</p>
+  </header>
+  <section class="section container">
+    <div class="matrix">
+      <div><strong>{total}</strong><p>条文献和工具性阅读</p></div>
+      <div><strong>{chineseCount}</strong><p>条中文文献</p></div>
+      <div><strong>{englishCount}</strong><p>条英文文献</p></div>
+      <div><strong>{grouped.length}</strong><p>个主题标签入口</p></div>
+    </div>
+  </section>
+  <section class="section container">
+    <div class="grid">
+      {readingPath.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Reading Protocol</p>
+        <h2>从书单到文献综述</h2>
+      </div>
+      <p>这里的文献不是背诵清单，而是用来训练问题意识、方法选择和贡献表达的材料库。</p>
+    </div>
+    <div class="grid">
+      {readingProtocols.map((item) => (
+        <article class="info-card">
+          <h2>{item.title}</h2>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container article-stack">
+    {grouped.map((group) => (
+      <article class="article-section">
+        <h2>{group.tag}</h2>
+        <ResourceList resources={group.items} />
+      </article>
+    ))}
+  </section>
+</BaseLayout>

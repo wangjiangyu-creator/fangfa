@@ -1,0 +1,67 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TopicCard from "@/components/TopicCard.astro";
+import { topics } from "@/content/courseData";
+
+const stages = [
+  { title: "研究入口", text: "专题1到4帮助学生从研究性质、思维训练、问题与假设、文献综述进入学术研究。" },
+  { title: "方法核心", text: "专题5到8集中训练论证、法教义学、比较法和实证研究。" },
+  { title: "综合推进", text: "专题9到12处理交叉学科、研究呈现、理论构建和 AI 法学研究。" },
+];
+
+const routes = [
+  { title: "从选题开始", text: "先读专题1、3、4，把兴趣限定为法域、制度、主体、时间和材料，再写出研究意义。" },
+  { title: "从部门法难题开始", text: "先读专题5、6，用条文、案例、解释方法和反对意见检验一个规范答案是否站得住。" },
+  { title: "从外国法或制度改革开始", text: "先读专题7，再回到专题3确认比较对象和功能是否可比，避免把外国法当作现成答案。" },
+  { title: "从经验材料开始", text: "先读专题8、9，确认数据、访谈、观察或档案材料能回答什么，不能替代什么规范判断。" },
+  { title: "从理论兴趣开始", text: "先读专题11，再回到专题4整理文献谱系，避免把理论框架写成作者名录。" },
+  { title: "从 AI 工具开始", text: "先读专题12，用引文核验和偏见审计过滤 AI 输出，再回到一手资料和核心文献。" },
+];
+---
+
+<BaseLayout title="专题" description="法律研究与思维方法课程专题">
+  <header class="page-header">
+    <p class="eyebrow">Topics</p>
+    <h1>专题</h1>
+    <p>每个专题都包含导读、学习目标、核心概念、方法展开、常见误区、学术文献、示例阅读、课堂练习和研讨问题。</p>
+  </header>
+  <section class="section container">
+    <div class="grid">
+      {stages.map((stage) => (
+        <article class="info-card">
+          <h2>{stage.title}</h2>
+          <p>{stage.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Study Routes</p>
+        <h2>按研究起点选择路径</h2>
+      </div>
+      <p>不必所有学生都从同一页线性读起。先判断自己的研究起点，再选择专题组合，最后回到研究问题和方法说明。</p>
+    </div>
+    <div class="grid">
+      {routes.map((route) => (
+        <article class="info-card">
+          <h2>{route.title}</h2>
+          <p>{route.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Course Map</p>
+        <h2>12 个专题</h2>
+      </div>
+      <p>专题之间可以线性学习，也可以按研究计划需要跳转：先定位问题，再选择方法，最后回到理论和呈现。</p>
+    </div>
+    <div class="grid">
+      {topics.map((topic) => <TopicCard topic={topic} />)}
+    </div>
+  </section>
+</BaseLayout>
