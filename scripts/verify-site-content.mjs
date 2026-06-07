@@ -274,6 +274,56 @@ for (const resourceId of ["胡玉鸿-研究方法争议", "胡玉鸿-法学方�
   assert.ok(typesTopic.resourceIds.includes(resourceId), `专题10应关联中文方法论文献：${resourceId}`);
 }
 
+const aiTopic = topics.find((topic) => topic.slug === "ai-and-legal-research");
+assert.ok(aiTopic, "应存在专题12：人工智能与法学研究");
+
+for (const resourceId of [
+  "王利明-人工智能时代法学新课题",
+  "赵精武周瑞珏-数字法学风险治理",
+  "薛刚-生成式AI改变研究方式",
+  "perlman-generative-ai-legal-scholarship",
+  "frazier-rozenshtein-large-language-scholarship",
+  "choi-llm-empirical-legal-research",
+  "livermore-llm-interpretability-els",
+  "dahl-large-legal-fictions",
+  "legalbench-legal-reasoning-benchmark",
+  "savelka-ashley-zero-shot-annotation",
+  "surden-chatgpt-llm-law",
+  "chau-livermore-computational-legal-studies",
+  "lindholm-textual-insights",
+]) {
+  assert.ok(resourceIds.has(resourceId), `应新增 AI 与法学研究文献：${resourceId}`);
+  assert.ok(aiTopic.resourceIds.includes(resourceId), `专题12应关联 AI 与法学研究文献：${resourceId}`);
+}
+
+for (const exampleId of [
+  "wang-ai-new-questions-example",
+  "zuo-computational-law-future-example",
+  "zhao-digital-law-risk-governance-example",
+  "perlman-ai-scholarship-example",
+  "choi-llm-empirical-example",
+  "dahl-legal-hallucination-example",
+  "legalbench-example",
+  "savelka-zero-shot-annotation-example",
+  "large-language-scholarship-example",
+]) {
+  assert.ok(exampleIds.has(exampleId), `应新增 AI 与法学研究范例：${exampleId}`);
+  assert.ok(aiTopic.exampleIds.includes(exampleId), `专题12应关联 AI 与法学研究范例：${exampleId}`);
+}
+
+for (const exerciseId of [
+  "ai-research-cycle-matrix",
+  "ai-argument-stress-test",
+  "ai-method-disclosure-log",
+]) {
+  assert.ok(exerciseIds.has(exerciseId), `应新增 AI 研究流程练习：${exerciseId}`);
+  assert.ok(aiTopic.exerciseIds.includes(exerciseId), `专题12应关联 AI 研究流程练习：${exerciseId}`);
+}
+
+for (const phrase of ["研究问题", "研究意义", "研究设计", "研究方法", "论证", "贡献"]) {
+  assert.ok(JSON.stringify(aiTopic).includes(phrase), `专题12应覆盖 AI 影响法学研究的环节：${phrase}`);
+}
+
 for (const topic of topics) {
   assert.ok(topic.overview?.length >= 2, `${topic.title} 应至少有两段导读`);
   assert.ok(topic.learningGoals?.length >= 3, `${topic.title} 应至少有三个学习目标`);

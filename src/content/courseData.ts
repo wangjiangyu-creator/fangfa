@@ -682,14 +682,14 @@ const baseTopics: TopicSeed[] = [
     slug: "ai-and-legal-research",
     title: "人工智能与法学研究",
     shortTitle: "AI 与研究",
-    summary: "把 AI 作为研究助理而不是答案机器，学习在原创性、资料核验、偏见和诚信之间使用它。",
-    keyQuestion: "AI 可以帮助我们发现什么，又在哪些地方必须被人类研究者严格校验？",
-    concepts: ["AI 辅助检索", "幻觉", "算法偏见", "学术诚信", "可验证来源"],
-    methods: ["提示词审计", "来源核验", "偏见诊断", "AI 输出复写"],
+    summary: "把 AI 放进研究问题、研究意义、设计、方法、论证和贡献表达的全过程，学习在人机协作中保持原创性、可核验性和作者责任。",
+    keyQuestion: "AI 会怎样改变法学研究从问题形成到论证完成的全过程，哪些环节可以交给工具辅助，哪些判断必须由研究者负责？",
+    concepts: ["AI 辅助检索", "研究问题生成", "研究意义校准", "提示词与语料记录", "幻觉", "算法偏见", "学术诚信", "作者责任"],
+    methods: ["问题生成与审计", "研究意义校准", "语料与提示词记录", "零样本标注", "反方论证测试", "AI 使用披露"],
     resourceIds: ["unesco-ai-ethics", "citron-pasquale", "epstein-king"],
     exampleIds: ["charlotin-authorities", "fasel-animal-rights"],
     exerciseIds: ["ai-question-audit", "question-refinement", "bias-workshop"],
-    researchPrompt: "让 AI 生成一个法律研究问题，再用一手资料和权威文献重写它。"
+    researchPrompt: "选择一个法学题目，记录 AI 在问题、意义、设计、方法、论证和贡献表达六个环节提供了什么帮助，并逐项说明你的核验、修正和取舍理由。"
   }
 ];
 

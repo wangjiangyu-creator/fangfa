@@ -1414,6 +1414,149 @@ export const additionalResources: Resource[] = [
     citation: "左卫民：《中国计算法学的未来：审思与前瞻》。",
     note: "适合讨论计算法学是否构成新范式，以及数据、统计和法律问题之间的真实关系。",
     url: "https://www.legal-theory.org/?mod=info&act=view&id=27262"
+  },
+  {
+    id: "王利明-人工智能时代法学新课题",
+    title: "人工智能时代提出的法学新课题",
+    author: "王利明",
+    type: "论文",
+    language: "中文",
+    tags: ["人工智能", "研究问题", "法律与科技", "中国法"],
+    citation: "王利明：《人工智能时代提出的法学新课题》，《中国法律评论》2018年第2期卷首语，第1-4页。",
+    note: "以“问题就是时代的口号”为入口，适合训练学生从技术变化中提炼真正的法学研究问题和研究意义。",
+    url: "https://zxzx.chinalaw.org.cn/portal/article/index/id/2672.html"
+  },
+  {
+    id: "赵精武周瑞珏-数字法学风险治理",
+    title: "论数字法学研究范式的转向：风险体系化治理",
+    author: "赵精武、周瑞珏",
+    type: "论文",
+    language: "中文",
+    tags: ["数字法学", "人工智能", "研究范式", "风险治理"],
+    citation: "赵精武、周瑞珏：《论数字法学研究范式的转向：风险体系化治理》，爱思想2024年9月28日转载。",
+    note: "把数字法学的研究范式放在法律关系、技术风险和体系化治理之间，适合说明 AI 研究不能只做风险罗列。",
+    url: "https://www.aisixiang.com/data/155412.html"
+  },
+  {
+    id: "薛刚-生成式AI改变研究方式",
+    title: "生成式人工智能将改变学术研究方式",
+    author: "薛刚",
+    type: "论文",
+    language: "中文",
+    tags: ["生成式AI", "学术研究", "学术写作", "学术诚信"],
+    citation: "薛刚：《生成式人工智能将改变学术研究方式》，《文献与数据学报》2024年第4期，第15-17页。",
+    note: "虽非专门法学论文，但可作为讨论 AI 进入研究构思、写作、出版和诚信治理的中文背景材料。",
+    url: "https://wxysjxb.ajcass.com/Magazine/Show?id=117570"
+  },
+  {
+    id: "perlman-generative-ai-legal-scholarship",
+    title: "Generative AI and the Future of Legal Scholarship",
+    author: "Andrew M. Perlman",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "法学研究", "学术写作", "作者责任"],
+    citation: "Perlman, A. M. (2024). Generative AI and the Future of Legal Scholarship. Suffolk University Law School Research Paper.",
+    note: "以生成式 AI 参与法律学术写作为示范和反思，适合讨论研究意义、原创性和作者责任的边界。",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5072765"
+  },
+  {
+    id: "frazier-rozenshtein-large-language-scholarship",
+    title: "Large Language Scholarship",
+    author: "Kevin Frazier and Alan Z. Rozenshtein",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "法律学术", "学术伦理", "法学院"],
+    citation: "Frazier, K., & Rozenshtein, A. Z. (2025). Large Language Scholarship. 20 FIU Law Review (forthcoming 2026).",
+    note: "从学术生产、期刊筛选、学生训练和认知去技能化等层面分析 AI 对法律学术生态的系统影响。",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5200768"
+  },
+  {
+    id: "choi-llm-empirical-legal-research",
+    title: "How to Use Large Language Models for Empirical Legal Research",
+    author: "Jonathan H. Choi",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "实证研究", "文本分析", "研究设计"],
+    citation: "Choi, J. H. (2023). How to Use Large Language Models for Empirical Legal Research. Journal of Institutional and Theoretical Economics (forthcoming).",
+    note: "直接说明 LLM 如何用于法律文本分类和经验研究设计，是 AI 作为研究方法工具的核心材料。",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4536852"
+  },
+  {
+    id: "livermore-llm-interpretability-els",
+    title: "Language Model Interpretability and Empirical Legal Studies",
+    author: "Michael A. Livermore, Felix Herron, and Daniel Rockmore",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "实证研究", "可解释性", "法学方法"],
+    citation: "Livermore, M. A., Herron, F., & Rockmore, D. (2024). Language Model Interpretability and Empirical Legal Studies. Journal of Institutional and Theoretical Economics, 180(2), 244.",
+    note: "提醒学生在使用 LLM 把法律文本转化为数据时，应权衡准确率、可解释性和方法透明。",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4599212"
+  },
+  {
+    id: "dahl-large-legal-fictions",
+    title: "Large Legal Fictions: Profiling Legal Hallucinations in Large Language Models",
+    author: "Matthew Dahl, Varun Magesh, Mirac Suzgun, and Daniel E. Ho",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "法律幻觉", "引文核验", "研究诚信"],
+    citation: "Dahl, M., Magesh, V., Suzgun, M., & Ho, D. E. (2024). Large Legal Fictions. Journal of Legal Analysis, 16(1), 64-93.",
+    note: "以系统证据说明法律大模型幻觉风险，适合训练引文核验、来源审计和 AI 输出的证据边界。",
+    url: "https://academic.oup.com/jla/article/16/1/64/7699227"
+  },
+  {
+    id: "legalbench-legal-reasoning-benchmark",
+    title: "LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models",
+    author: "Neel Guha et al.",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "法律推理", "评测", "研究设计"],
+    citation: "Guha, N., Nyarko, J., Ho, D. E., Ré, C., et al. (2023). LegalBench. Advances in Neural Information Processing Systems 36.",
+    note: "把法律推理拆成可评测任务，为讨论 AI 法律能力、评测指标和研究设计提供范例。",
+    url: "https://papers.neurips.cc/paper_files/paper/2023/hash/89e44582fd28ddfea1ea4dcb0ebbf4b0-Abstract-Datasets_and_Benchmarks.html"
+  },
+  {
+    id: "savelka-ashley-zero-shot-annotation",
+    title: "The Unreasonable Effectiveness of Large Language Models in Zero-Shot Semantic Annotation of Legal Texts",
+    author: "Jaromir Savelka and Kevin D. Ashley",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "文本标注", "实证研究", "法律文本分析"],
+    citation: "Savelka, J., & Ashley, K. D. (2023). The Unreasonable Effectiveness of Large Language Models in Zero-Shot Semantic Annotation of Legal Texts. Frontiers in Artificial Intelligence, 6.",
+    note: "适合展示 AI 如何改变法律文本编码、案例分析和实证研究的前期探索成本。",
+    url: "https://www.frontiersin.org/articles/10.3389/frai.2023.1279794/full"
+  },
+  {
+    id: "surden-chatgpt-llm-law",
+    title: "ChatGPT, Large Language Models, and Law",
+    author: "Harry Surden",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "法律与科技", "大语言模型", "法学方法"],
+    citation: "Surden, H. (2024). ChatGPT, Large Language Models, and Law. Fordham Law Review, 92, 1941.",
+    note: "概括 LLM 的技术进展、法律应用和限制，适合作为学生进入 AI 与法律研究的英文总论。",
+    url: "https://ir.lawnet.fordham.edu/flr/vol92/iss5/9/"
+  },
+  {
+    id: "chau-livermore-computational-legal-studies",
+    title: "Computational Legal Studies Comes of Age",
+    author: "Bao Chau and Michael A. Livermore",
+    type: "论文",
+    language: "英文",
+    tags: ["计算法学", "人工智能", "实证研究", "法律文本分析"],
+    citation: "Chau, B., & Livermore, M. A. (2024). Computational Legal Studies Comes of Age. European Journal of Empirical Legal Studies, 1(1).",
+    note: "用 law-as-code 与 law-as-data 概括计算法学发展，适合连接 AI、数据科学和传统法学方法。",
+    url: "https://publicera.kb.se/ejels/article/view/19684"
+  },
+  {
+    id: "lindholm-textual-insights",
+    title: "Textual Insights: What Can Computers Teach Legal Scholars About Law?",
+    author: "Johan Lindholm",
+    type: "论文",
+    language: "英文",
+    tags: ["人工智能", "法教义学", "文本分析", "法学研究"],
+    citation: "Lindholm, J. (2024). Textual Insights: What Can Computers Teach Legal Scholars About Law? Stockholm IP Law Review, 2, 25-32.",
+    note: "讨论计算工具如何补充教义学文本研究，适合说明 AI 不必替代传统法学方法，而可扩大可观察材料。",
+    url: "https://www.lawpub.se/en/artikel/10.53292/33313cc8.3f967df2"
   }
 ];
 
@@ -1978,6 +2121,105 @@ export const additionalExamples: Example[] = [
     discussion: ["AI 法学研究最容易在哪些地方伪问题化？", "批判技术热潮是否意味着拒绝计算法学？"],
     citation: "刘艳红：《人工智能法学研究的反智化批判》，《东方法学》2019年第5期。",
     url: "https://sls.org.cn/webfile/upload/2019/10-22/14-22-550205-626443287.pdf"
+  },
+  {
+    id: "wang-ai-new-questions-example",
+    title: "人工智能时代提出的法学新课题",
+    author: "王利明",
+    method: "AI 法学问题意识、研究意义、制度挑战识别",
+    question: "人工智能时代哪些技术变化真正提出了新的法学问题，而不只是给旧问题换了一个技术名称？",
+    contribution: "以人格权、知识产权、数据保护、算法透明和侵权责任等问题为入口，示范如何从时代变化中提炼研究问题和研究意义。",
+    discussion: ["“问题就是时代的口号”如何转化为可写作的法学问题？", "哪些 AI 议题需要立法论，哪些可以先通过解释论处理？"],
+    citation: "王利明：《人工智能时代提出的法学新课题》，《中国法律评论》2018年第2期卷首语。",
+    url: "https://zxzx.chinalaw.org.cn/portal/article/index/id/2672.html"
+  },
+  {
+    id: "zuo-computational-law-future-example",
+    title: "中国计算法学的未来：审思与前瞻",
+    author: "左卫民",
+    method: "计算法学、机器学习、实证研究设计",
+    question: "计算法学究竟是新学科、新方法，还是法律实证研究在机器学习条件下的新阶段？",
+    contribution: "把计算法学拆成概念、可计算数据和机器学习方法三个问题，帮助学生识别研究设计中的数据边界。",
+    discussion: ["为什么并非所有法律问题都可以被计算？", "机器学习发现相关性之后，法学研究还需要完成哪些规范判断？"],
+    citation: "左卫民：《中国计算法学的未来：审思与前瞻》。",
+    url: "https://www.aisixiang.com/data/134162.html"
+  },
+  {
+    id: "zhao-digital-law-risk-governance-example",
+    title: "论数字法学研究范式的转向",
+    author: "赵精武、周瑞珏",
+    method: "数字法学、风险体系化治理、研究范式辨析",
+    question: "数字法学和人工智能法学如何避免沦为“技术风险清单+对策建议”的简单写法？",
+    contribution: "把数字法学研究从单点风险治理推进到分级分类、全生命周期和协同治理，展示 AI 法研究如何建立理论框架。",
+    discussion: ["风险治理能否成为法学研究范式？", "跨学科知识在论文中是研究对象、论据，还是方法本身？"],
+    citation: "赵精武、周瑞珏：《论数字法学研究范式的转向：风险体系化治理》。",
+    url: "https://www.aisixiang.com/data/155412.html"
+  },
+  {
+    id: "perlman-ai-scholarship-example",
+    title: "Generative AI and the Future of Legal Scholarship",
+    author: "Andrew M. Perlman",
+    method: "生成式 AI、法律学术生产、作者责任反思",
+    question: "当生成式 AI 可以提出理论构想并生成法律学术文本时，法律学者的原创性和作者责任应如何重新说明？",
+    contribution: "以 AI 生成法律学术文本本身作为论证实验，迫使读者重新审视研究意义、写作主体和学术评价标准。",
+    discussion: ["AI 生成的“新理论”如何被检验是否真正有贡献？", "使用 AI 写作时，披露、核验和作者责任各自解决什么问题？"],
+    citation: "Perlman, A. M. (2024). Generative AI and the Future of Legal Scholarship.",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5072765"
+  },
+  {
+    id: "choi-llm-empirical-example",
+    title: "How to Use Large Language Models for Empirical Legal Research",
+    author: "Jonathan H. Choi",
+    method: "LLM 辅助实证研究、法律文本分类、研究设计",
+    question: "大语言模型能否替代或补充人工编码，帮助法律学者分析大量判例文本？",
+    contribution: "以最高法院意见的分类任务展示 LLM 在经验法学研究中的可能用途和限制，适合拆解 AI 辅助研究设计。",
+    discussion: ["LLM 分类结果怎样与人工编码互相校验？", "模型表现良好是否足以证明研究结论可靠？"],
+    citation: "Choi, J. H. (2023). How to Use Large Language Models for Empirical Legal Research.",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4536852"
+  },
+  {
+    id: "dahl-legal-hallucination-example",
+    title: "Large Legal Fictions",
+    author: "Matthew Dahl, Varun Magesh, Mirac Suzgun, and Daniel E. Ho",
+    method: "法律幻觉测量、AI 输出审计、证据可靠性",
+    question: "公众可用的大语言模型在回答法律问题时会怎样产生幻觉，研究者如何系统测量这种风险？",
+    contribution: "建立法律幻觉类型和实证测量路径，让 AI 引文核验从道德提醒变成可操作的研究方法。",
+    discussion: ["为什么法律研究比一般写作更不能容忍“看似真实”的错误？", "幻觉研究如何影响学生使用 AI 做文献综述和案例检索？"],
+    citation: "Dahl et al., Journal of Legal Analysis, 16(1), 64-93 (2024).",
+    url: "https://academic.oup.com/jla/article/16/1/64/7699227"
+  },
+  {
+    id: "legalbench-example",
+    title: "LegalBench",
+    author: "Neel Guha et al.",
+    method: "法律推理评测、任务构建、跨学科研究设计",
+    question: "如果要评价 AI 的法律推理能力，应当把法律推理拆成哪些任务，而不是只问模型会不会答题？",
+    contribution: "由法律人与技术研究者共同构建评测任务，提供研究设计、指标选择和法律能力分类的范例。",
+    discussion: ["评测基准能否代表真实法律推理？", "法律概念如何被转化为机器可评测任务而不被过度简化？"],
+    citation: "Guha et al., Advances in Neural Information Processing Systems 36 (2023).",
+    url: "https://papers.neurips.cc/paper_files/paper/2023/hash/89e44582fd28ddfea1ea4dcb0ebbf4b0-Abstract-Datasets_and_Benchmarks.html"
+  },
+  {
+    id: "savelka-zero-shot-annotation-example",
+    title: "Zero-Shot Semantic Annotation of Legal Texts",
+    author: "Jaromir Savelka and Kevin D. Ashley",
+    method: "零样本标注、法律文本分析、AI 辅助编码",
+    question: "没有大量人工标注训练集时，LLM 能否帮助研究者快速建立法律文本编码方案？",
+    contribution: "展示用简短类型定义进行法律文本语义标注的可行性，并提醒研究者记录批量标注、成本和性能取舍。",
+    discussion: ["零样本标注适合探索性研究还是最终结论？", "编码定义如何影响 AI 输出和研究可复制性？"],
+    citation: "Savelka & Ashley, Frontiers in Artificial Intelligence, 6 (2023).",
+    url: "https://www.frontiersin.org/articles/10.3389/frai.2023.1279794/full"
+  },
+  {
+    id: "large-language-scholarship-example",
+    title: "Large Language Scholarship",
+    author: "Kevin Frazier and Alan Z. Rozenshtein",
+    method: "AI 学术生态、法律期刊、认知去技能化",
+    question: "当法律学术写作被 AI 大规模加速，法学院、期刊和学者应如何重建质量控制与学术责任？",
+    contribution: "把 AI 对法律学术的影响从个体写作扩展到出版压力、审稿机制、学生训练和学术权威的制度层面。",
+    discussion: ["AI 提升产量是否会稀释学术贡献？", "法律期刊应更重视 AI 披露还是作者最终责任？"],
+    citation: "Frazier & Rozenshtein, Large Language Scholarship (2025).",
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5200768"
   }
 ];
 
@@ -2037,6 +2279,30 @@ export const additionalExercises: Exercise[] = [
     steps: ["让 AI 为一个法学研究问题生成 10 条参考文献。", "逐条核验题名、作者、刊物、年份和链接。", "标注无法核验或引用错误的条目。", "用真实文献替换至少 5 条。"],
     output: "AI 引文核验表和修订书目。",
     tags: ["人工智能", "学术诚信", "文献综述"]
+  },
+  {
+    id: "ai-research-cycle-matrix",
+    title: "AI 研究流程矩阵",
+    goal: "训练学生逐项判断 AI 如何影响研究问题、研究意义、研究设计、研究方法、论证和贡献表达。",
+    steps: ["选择一个自己的法学选题。", "分别让 AI 在六个环节提出建议：问题、意义、设计、方法、论证、贡献。", "为每一项标出可采纳、需核验、应删除三类结果。", "用真实文献、规范文本或数据材料改写 AI 给出的建议。"],
+    output: "一张六环节 AI 研究流程矩阵和 600 字修订说明。",
+    tags: ["人工智能", "研究设计", "研究问题", "学术诚信"]
+  },
+  {
+    id: "ai-argument-stress-test",
+    title: "AI 反方论证压力测试",
+    goal: "把 AI 用作反对意见生成器，同时训练学生区分有效反驳、虚假权威和空泛质疑。",
+    steps: ["写出一个论文核心主张和三条理由。", "让 AI 生成最强反对意见、可能反例和需要补充的证据。", "逐项判断哪些反对意见有真实文献或案例支持。", "修改主张的限定条件，并记录哪些 AI 反驳被舍弃。"],
+    output: "反方论证审计表和一版修订后的核心主张。",
+    tags: ["人工智能", "论证", "批判性思维"]
+  },
+  {
+    id: "ai-method-disclosure-log",
+    title: "AI 使用披露日志",
+    goal: "训练学生把 AI 使用写成可核验的方法记录，而不是笼统声明“使用过 AI”。",
+    steps: ["记录所用 AI 工具、日期、任务、提示词和输入材料。", "标出 AI 输出进入论文的具体环节。", "说明每一处输出如何被核验、改写或删除。", "写出一段可放入论文方法说明或致谢中的 AI 使用披露。"],
+    output: "AI 使用日志和 150 字披露说明。",
+    tags: ["人工智能", "学术诚信", "研究方法", "法律写作"]
   },
   {
     id: "abstract-rewrite-lab",
@@ -2153,9 +2419,9 @@ export const topicAssociations: Record<string, TopicAssociation> = {
     exerciseIds: ["theory-debate-map", "article-anatomy", "chinese-method-debate-map"]
   },
   "ai-and-legal-research": {
-    resourceIds: ["barocas-selbst-disparate-impact", "selbst-barocas-explainable", "surden-machine-learning-law", "cail2018", "lawgpt-chinese", "laiw-benchmark", "nissenbaum-contextual-integrity", "citron-technological-due-process", "kroll-accountable-algorithms", "coglianese-lehr-regulating-robot", "wexler-trade-secrets", "huq-human-decision", "garrett-rudin-glass-box", "刘艳红-人工智能法学反智化", "张凌寒-算法权力", "丁晓东-算法法律规制", "左卫民-法律人工智能再思考", "左卫民-计算法学未来"],
-    exampleIds: ["barocas-disparate-example", "citron-pasquale-example", "cail2018-example", "citron-tech-due-process-example", "kroll-accountable-example", "huq-human-decision-example", "zhang-algorithm-power-example", "ding-algorithm-regulation-example", "liu-ai-critique-example"],
-    exerciseIds: ["ai-citation-verification", "empirical-coding-protocol", "algorithm-governance-brief"]
+    resourceIds: ["barocas-selbst-disparate-impact", "selbst-barocas-explainable", "surden-machine-learning-law", "surden-chatgpt-llm-law", "cail2018", "lawgpt-chinese", "laiw-benchmark", "legalbench-legal-reasoning-benchmark", "choi-llm-empirical-legal-research", "livermore-llm-interpretability-els", "dahl-large-legal-fictions", "savelka-ashley-zero-shot-annotation", "chau-livermore-computational-legal-studies", "lindholm-textual-insights", "perlman-generative-ai-legal-scholarship", "frazier-rozenshtein-large-language-scholarship", "nissenbaum-contextual-integrity", "citron-technological-due-process", "kroll-accountable-algorithms", "coglianese-lehr-regulating-robot", "wexler-trade-secrets", "huq-human-decision", "garrett-rudin-glass-box", "刘艳红-人工智能法学反智化", "王利明-人工智能时代法学新课题", "张凌寒-算法权力", "丁晓东-算法法律规制", "左卫民-法律人工智能再思考", "左卫民-计算法学未来", "赵精武周瑞珏-数字法学风险治理", "薛刚-生成式AI改变研究方式"],
+    exampleIds: ["barocas-disparate-example", "citron-pasquale-example", "cail2018-example", "citron-tech-due-process-example", "kroll-accountable-example", "huq-human-decision-example", "zhang-algorithm-power-example", "ding-algorithm-regulation-example", "liu-ai-critique-example", "wang-ai-new-questions-example", "zuo-computational-law-future-example", "zhao-digital-law-risk-governance-example", "perlman-ai-scholarship-example", "choi-llm-empirical-example", "dahl-legal-hallucination-example", "legalbench-example", "savelka-zero-shot-annotation-example", "large-language-scholarship-example"],
+    exerciseIds: ["ai-citation-verification", "ai-research-cycle-matrix", "ai-argument-stress-test", "ai-method-disclosure-log", "empirical-coding-protocol", "algorithm-governance-brief"]
   }
 };
 
@@ -2274,12 +2540,13 @@ export const topicDetails: Record<string, TopicDetail> = {
   },
   "ai-and-legal-research": {
     overview: [
-      "AI 可以帮助研究者扩展检索、生成问题草案、改写摘要和发现可能的争议点，但它不能替代来源核验、概念判断、规范论证和学术责任。所有 AI 输出都必须回到可验证文献和一手资料。",
-      "本专题把 AI 同时作为工具和研究对象。作为工具，它需要提示词审计、引文核验和偏见检查；作为对象，它涉及算法歧视、可解释性、隐私、自动化决策、法律数据集和法律推理能力。"
+      "本专题不再把 AI 只作为“检索工具”或“写作助手”，而是把它放进法学研究的完整流程：研究问题如何生成，研究意义如何被证明，研究设计如何安排材料和边界，研究方法如何选择与记录，论证如何接受反方测试，最终贡献如何由人类作者承担责任。",
+      "AI 可以降低法律文本分类、文献搜寻、案例初筛、摘要改写和反对意见生成的成本，也可能带来幻觉引文、伪问题、过度概括、概念偷换、数据偏差和认知去技能化。所有 AI 输出都必须回到可验证文献、一手资料、规范文本和可复查的方法记录。",
+      "本专题同时把 AI 作为研究对象。中文材料帮助学生理解人工智能时代的新法学问题、计算法学和数字法学研究范式；英文材料展示生成式 AI 如何改变法律学术生产、实证法学、文本标注、法律推理评测和法律幻觉研究。"
     ],
-    learningGoals: ["能区分 AI 辅助研究、AI 法律问题和 AI 生成内容风险。", "掌握 AI 引文核验和来源校正流程。", "理解算法偏见、可解释性、隐私和法律数据集的基本研究问题。"],
-    methodSteps: ["让 AI 生成研究问题或书目草案。", "逐条核验来源、题名、作者、年份和核心主张。", "标出幻觉、偏见、过度概括和不可验证内容。", "用真实文献和一手资料重写研究问题。"],
-    pitfalls: ["把 AI 输出当作已经完成的文献综述。", "引用不存在或不可核验的文献。", "忽视训练数据、评测任务和法律推理之间的差距。"],
-    seminarQuestions: ["AI 能否提出真正原创的法学研究问题？", "法律大模型评测应测试法律知识、法律推理，还是职业伦理？"]
+    learningGoals: ["能区分 AI 辅助研究、AI 法律问题和 AI 生成内容风险。", "能用六环节矩阵检查 AI 对研究问题、意义、设计、方法、论证和贡献表达的影响。", "掌握 AI 引文核验、来源校正、提示词记录和使用披露流程。", "理解算法偏见、可解释性、法律数据集、评测基准和法律幻觉的基本研究问题。"],
+    methodSteps: ["问题生成：让 AI 提出多个研究问题，但逐一检查其真实性、法域边界、资料可得性和是否只是技术热词包装。", "意义校准：要求 AI 区分现实重要性、学术空白、规范价值和制度影响，再用真实文献证明这些意义并非空话。", "设计审计：记录语料来源、案例选择、比较对象、模型版本、提示词、排除标准和伦理风险，说明 AI 在哪一步只是辅助。", "方法选择：根据问题决定 AI 用于检索、摘要、翻译、文本标注、变量编码、反方论证还是写作润色，并为每种用途设置人工复核。", "论证压力测试：让 AI 生成反例、反方观点和薄弱环节，再用案例、规范文本和权威文献判断哪些反驳成立。", "贡献与披露：最终贡献必须由作者说明，披露 AI 使用范围，保留核验记录，并写清 AI 未能解决的限制。"],
+    pitfalls: ["把 AI 输出当作已经完成的文献综述。", "引用不存在或不可核验的文献。", "把 AI 生成的流畅摘要误认为研究意义已经成立。", "把模型分类、评测分数或文本标注结果直接当作规范结论。", "忽视训练数据、评测任务、提示词和法律推理之间的差距。"],
+    seminarQuestions: ["AI 能否提出真正原创的法学研究问题，还是只能重组已有问题？", "法律大模型评测应测试法律知识、法律推理、资料真实性，还是职业伦理？", "当 AI 帮助生成研究意义和论文贡献时，作者如何证明最终贡献属于自己的判断？", "在什么条件下，LLM 文本标注可以成为法律实证研究的方法，而不是未经说明的捷径？"]
   }
 };
