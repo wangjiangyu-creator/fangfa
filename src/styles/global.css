@@ -252,7 +252,8 @@ h3 {
 .info-card,
 .resource-item,
 .example-card,
-.exercise-card {
+.exercise-card,
+.citation-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 20px;
@@ -273,7 +274,8 @@ h3 {
 .topic-card h3,
 .resource-item h3,
 .example-card h3,
-.exercise-card h3 {
+.exercise-card h3,
+.citation-card h3 {
   margin: 10px 0 10px;
 }
 
@@ -281,12 +283,46 @@ h3 {
 .info-card p,
 .resource-item p,
 .example-card p,
-.exercise-card p {
+.exercise-card p,
+.citation-card p {
   color: #3f4b56;
 }
 
 .example-card h3 a {
   color: var(--accent-2);
+}
+
+.citation-card h3 a {
+  color: var(--accent-2);
+}
+
+.citation-card h4 {
+  margin: 18px 0 8px;
+  font-size: 15px;
+}
+
+.citation-card ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.citation-examples {
+  display: grid;
+  gap: 8px;
+}
+
+.citation-examples code {
+  display: block;
+  overflow-wrap: anywhere;
+  border: 1px solid #dbe4ea;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #f7f9fa;
+  color: #26323b;
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  white-space: normal;
 }
 
 .topic-number,
@@ -437,6 +473,19 @@ h3 {
   color: var(--accent-2);
 }
 
+.check-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.check-list li {
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 10px 4px;
+}
+
 .timeline {
   display: grid;
   gap: 12px;
@@ -511,7 +560,8 @@ h3 {
 
   .grid,
   .grid.two,
-  .matrix {
+  .matrix,
+  .check-list {
     grid-template-columns: 1fr;
   }
 
@@ -544,7 +594,8 @@ h3 {
   .info-card,
   .resource-item,
   .example-card,
-  .exercise-card {
+  .exercise-card,
+  .citation-card {
     padding: 16px;
   }
 

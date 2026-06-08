@@ -1,0 +1,286 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const chineseGuides = [
+  {
+    title: "中文法学引注的共通基准",
+    source: "《法学引注手册》",
+    url: "https://law.nankai.edu.cn/_upload/article/files/1a/dc/5322bd594000aaa39f8a79402595/f6116f14-503f-4901-83eb-9394b4b153e9.pdf",
+    summary: "由中国法学会法学期刊研究会推荐，参与制定和使用单位包括《中国法学》《中外法学》《法学研究》《环球法律评论》《清华法学》《法学家》等中文法学期刊，以及多家法律出版社和中国知网。",
+    rules: ["通常采用页下脚注。", "引注应必要、真实、相关、权威，优先引用原始出处。", "中文文献多用书名号；间接引用常用“参见”，转引应慎用并标明来源。"],
+    examples: ["王名扬：《美国行政法》，北京大学出版社2007年版。", "季卫东：《法律程序的意义：对中国法制建设的另一种思考》，载《中国社会科学》1993年第1期。", "《民法典》第1165条第1款。"]
+  },
+  {
+    title: "《中国法学》简化注释体例",
+    source: "中国法学杂志社",
+    url: "https://clsjp.chinalaw.org.cn/portal/list/index/id/1318.html",
+    summary: "中国法学杂志社单列中文注释体例和外文引注规范简化版，适合投稿前作为格式核对入口。",
+    rules: ["先按目标刊物发布的简化版体例统一中文与外文注释。", "中文文献核对作者、篇名、刊名、年份、期数和页码。", "外文文献同时注意期刊名、卷期、页码和法域习惯。"],
+    examples: ["张文显：《法治与国家治理现代化》，《中国法学》2014年第4期，第18页。", "[美]富勒：《法律的道德性》，郑戈译，商务印书馆2005年版。"]
+  },
+  {
+    title: "《中外法学》引证体例",
+    source: "《中外法学》",
+    url: "https://journal.pkulaw.cn/Home/Annotation",
+    summary: "该体例明确采用脚注、每篇稿件编号连排，并对中文文献、外文文献、司法案例、法条和网络资料分别给出示例。",
+    rules: ["注释信息一般按作者、文献名称、出版信息、页码排列。", "非直接引用原文前加“参见”；原则上少用转引。", "同一文献再次引用可用“同上注”或“见前注”。"],
+    examples: ["苏力：《送法下乡——中国基层司法制度研究》（修订版），北京大学出版社2011年版，第55页。", "陈瑞华：“程序性制裁制度的法理学分析”，《中国法学》2005年第6期，第155页。", "王放与五洋建设集团股份有限公司、陈志樟证券虚假陈述责任纠纷案，浙江省杭州市中级人民法院民事判决书，（2020）浙01民初1691号。"]
+  },
+  {
+    title: "《法律科学》注释体例",
+    source: "《法律科学》",
+    url: "https://flkx.nwupl.edu.cn/zzwd/146783.htm",
+    summary: "该刊自2021年第1期起执行新的注释体例，并说明其他未尽事项以北京大学出版社2020年版《法学引注手册》为准。",
+    rules: ["采用页下脚注、连续编号。", "期刊类作品标明作者、篇名、刊名、出版年、刊期和页码。", "网络文献应写明作者、文献名、网址及访问日期。"],
+    examples: ["张文显：《法治与国家治理现代化》，《中国法学》2014年第4期，第18页。", "陈金钊：《国家治理体系法治化及其意义——兼论法律方法的功能》，载陈金钊、谢晖主编：《法律方法》（第15卷），山东人民出版社2014年版，第66页。"]
+  },
+  {
+    title: "《法学家》等期刊的投稿体例入口",
+    source: "《法学家》",
+    url: "https://faxuejia.ruc.edu.cn/CN/column/7/items",
+    summary: "《法学家》网站在下载中心提供本刊注释体例。实际投稿时，应以目标刊物最新公布版本为准。",
+    rules: ["投稿前先下载目标刊物的注释体例。", "先统一脚注样式，再处理摘要、关键词、作者信息等投稿部件。", "不要把一个刊物的细节当然套用于另一个刊物。"],
+    examples: ["同一篇中文论文，投往不同刊物时，可能需要调整篇名引号、是否使用“载”、注码位置和重复引用格式。"]
+  },
+];
+
+const globalStyles = [
+  {
+    title: "GB/T 7714",
+    region: "中国通用参考文献著录",
+    source: "国家标准全文公开系统",
+    url: "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=7FA63E9BBA56E60471AEDAEBDE44B14C",
+    summary: "《信息与文献 参考文献著录规则》是中国大陆学位论文、社科论文和综合性期刊常见的参考文献著录标准。它不专属于法学，但很适合课程论文、学位论文和跨学科论文的文末参考文献。",
+    rules: ["常用顺序编码制或著者-出版年制，按学校或期刊要求选择。", "文献类型可用标识码，如专著 M、期刊 J、学位论文 D、报告 R、电子文献 EB/OL。", "中文学位论文和社科论文常用它整理文末参考文献，再配合法学脚注处理法律材料。"],
+    examples: ["王名扬. 美国行政法[M]. 北京: 北京大学出版社, 2007.", "陈瑞华. 程序性制裁制度的法理学分析[J]. 中国法学, 2005(6): 153-163.", "中华人民共和国民法典[S]. 2020."]
+  },
+  {
+    title: "APA 7th",
+    region: "社会科学作者年份制",
+    source: "APA Style",
+    url: "https://apastyle.apa.org/style-grammar-guidelines/references/examples",
+    summary: "APA 第7版是心理学、教育学、社会科学和部分实证研究常用体例。法社会学、法律心理学、实证法学、AI 与法律研究中，若期刊或课程要求作者年份制，APA 很常见。",
+    rules: ["正文用作者姓氏和年份，直接引文补页码。", "文末 References 按作者字母顺序排列，并使用悬挂缩进。", "期刊论文通常写作者、年份、题名、期刊名、卷期、页码和 DOI。"],
+    examples: ["正文：法律现实主义研究可与经验材料结合（Ewick & Silbey, 1998, p. 45）。", "Hart, H. L. A. (2012). The concept of law (3rd ed.). Oxford University Press.", "Dahl, M., Magesh, V., Suzgun, M., & Ho, D. E. (2024). Large legal fictions. Journal of Legal Analysis, 16(1), 64-93."]
+  },
+  {
+    title: "Bluebook",
+    region: "美国法律写作",
+    source: "Cornell LII / The Bluebook Online",
+    url: "https://www.law.cornell.edu/wex/the_bluebook",
+    summary: "美国法学院、联邦法院和法律评论常用的法律引注系统。适用于美国判例、成文法、法规、法律评论和法律备忘录。",
+    rules: ["判例通常写案件名、卷号、报告集缩写、起始页、精确页码和年份。", "法规写标题号、法典缩写和条号。", "学术论文脚注通常写作者、题名、卷号、期刊缩写、起始页、精确页码和年份。"],
+    examples: ["Brown v. Board of Education, 347 U.S. 483, 495 (1954).", "42 U.S.C. § 1983 (2018).", "Lon L. Fuller, Positivism and Fidelity to Law, 71 Harv. L. Rev. 630, 632 (1958)."]
+  },
+  {
+    title: "OSCOLA",
+    region: "英国法与英联邦法学写作",
+    source: "Oxford Law Faculty",
+    url: "https://www.law.ox.ac.uk/oscola",
+    summary: "Oxford University Standard for Citation of Legal Authorities，由牛津大学法学院编辑，英国法学院和法律出版物广泛使用。",
+    rules: ["主要使用脚注，正文一般不使用作者年份夹注。", "英国判例重视中立引证、法院、报告集和精确段落或页码。", "书籍和论文格式相对简洁，通常省略多余标点。"],
+    examples: ["Donoghue v Stevenson [1932] AC 562 (HL).", "Human Rights Act 1998, s 6.", "HLA Hart, The Concept of Law (3rd edn, OUP 2012) 94."]
+  },
+  {
+    title: "Harvard",
+    region: "作者年份制",
+    source: "Harvard Library FAQ / university guides",
+    url: "https://ask.library.harvard.edu/faq/81735",
+    summary: "Harvard 通常指作者年份制，而非一个单一官方手册。不同大学会有本校版本，但核心是正文夹注与文末参考文献一一对应。",
+    rules: ["正文写作者姓氏、年份，直接引文补页码。", "文末参考文献按作者字母顺序排列。", "同一作者同一年多篇作品可用 a、b、c 区分。"],
+    examples: ["正文：Hart (2012, p. 94) argues...", "正文：规则的有效性依赖承认规则（Hart, 2012, p. 94）。", "参考文献：Hart, H.L.A. (2012) The Concept of Law. 3rd edn. Oxford: Oxford University Press."]
+  },
+  {
+    title: "Chicago",
+    region: "人文学科与社会科学",
+    source: "Chicago Manual of Style",
+    url: "https://www.chicagomanualofstyle.org/tools_citationguide.html",
+    summary: "Chicago 同时提供注释-书目制和作者-日期制。法律史、法社会学、政治理论、思想史类法学研究常会遇到。",
+    rules: ["注释-书目制用脚注或尾注，文末可列书目。", "作者-日期制在正文中用作者和年份夹注。", "选哪一种通常取决于课程、出版社或期刊要求。"],
+    examples: ["脚注：H. L. A. Hart, The Concept of Law, 3rd ed. (Oxford: Oxford University Press, 2012), 94.", "书目：Hart, H. L. A. The Concept of Law. 3rd ed. Oxford: Oxford University Press, 2012.", "作者-日期：规则的有效性依赖承认规则（Hart 2012, 94）。"]
+  },
+  {
+    title: "McGill Guide",
+    region: "加拿大法律写作",
+    source: "McGill Law Journal",
+    url: "https://lawjournal.mcgill.ca/cite-guide/",
+    summary: "Canadian Guide to Uniform Legal Citation 通常称 McGill Guide，是加拿大法学院、法院、律师和法律期刊广泛使用的法律引注指南，适合加拿大法和英美法比较研究。",
+    rules: ["判例通常写案件名、年份或报告集、卷号、报告集缩写和起始页。", "加拿大法规需注意联邦或省级法源、修订法规年份、章号和条号。", "双语和双法系材料应按被引用文本的语言和法域习惯处理。"],
+    examples: ["Reference re Secession of Quebec, [1998] 2 SCR 217.", "R v Oakes, [1986] 1 SCR 103.", "Criminal Code, RSC 1985, c C-46, s 1."]
+  },
+  {
+    title: "AGLC",
+    region: "澳大利亚法律写作",
+    source: "Melbourne University Law Review / Melbourne Journal of International Law",
+    url: "https://law.unimelb.edu.au/__data/assets/pdf_file/0011/3090935/AGLC4-with-Bookmarks.pdf",
+    summary: "Australian Guide to Legal Citation 是澳大利亚法律写作最常见的引注指南，适合引用澳大利亚判例、成文法、议会材料、期刊文章和比较法材料。",
+    rules: ["以脚注为主，判例通常写案件名、年份、卷号、报告集缩写和起始页。", "法规写法要标明法名、年份、管辖区缩写和具体条款。", "澳大利亚公法、公司法、竞争法和普通法比较论文中很常用。"],
+    examples: ["Mabo v Queensland [No 2] (1992) 175 CLR 1.", "Competition and Consumer Act 2010 (Cth) s 18.", "Australian Constitution s 51(xx)."]
+  },
+  {
+    title: "香港法",
+    region: "香港判例、法例与本地材料",
+    source: "Hong Kong Judiciary / HKLII",
+    url: "https://www.judiciary.hk/en/judgments_legal_reference/index.html",
+    summary: "香港法研究常需要同时处理中立引证、报告集引证、案件编号、香港法例章号和双语材料。它适合香港公法、公司法、普通法和中国法比较研究。",
+    rules: ["有中立引证时优先记录，如 HKCFA、HKCA、HKCFI。", "已刊载案例可同时保留 HKLRD、HKC、HKCFAR 等报告集引证。", "香港法例通常写章节号 Cap.、条号 section，以及必要时的中文法例名称。"],
+    examples: ["Sham Tsz Kit v Secretary for Justice [2023] HKCFA 28.", "Ng Ka Ling v Director of Immigration [1999] 1 HKLRD 315.", "Companies Ordinance (Cap. 622), s 462."]
+  },
+  {
+    title: "国际法材料",
+    region: "条约、国际法院与联合国文件",
+    source: "OSCOLA International Law Sources",
+    url: "https://www.law.ox.ac.uk/sites/files/oxlaw/oscola_2006_citing_international_law.pdf",
+    summary: "国际法论文常引用条约、ICJ/PCIJ 判决、仲裁裁决、联合国文件、WTO 文件和国际组织材料。可用 OSCOLA 国际法补充、Bluebook 或目标期刊指定体例统一处理。",
+    rules: ["条约写明名称、通过日期、生效日期、条约集和页码。", "国际法院判决写明案名、阶段、年份、报告集和页码。", "联合国文件要保留机构、文件号和日期。"],
+    examples: ["Vienna Convention on the Law of Treaties (adopted 23 May 1969, entered into force 27 January 1980) 1155 UNTS 331.", "Military and Paramilitary Activities in and against Nicaragua (Nicaragua v United States of America) (Merits) [1986] ICJ Rep 14.", "UNSC Res 1373 (28 September 2001) UN Doc S/RES/1373."]
+  },
+  {
+    title: "欧盟法材料",
+    region: "CJEU、ECLI、条例与指令",
+    source: "EUR-Lex",
+    url: "https://eur-lex.europa.eu/content/help/eurlex-content/ecli.html?locale=en",
+    summary: "欧盟法研究常见于竞争法、数据保护、AI 监管、环境法和贸易法。引用时要注意 CJEU 案号、ECLI、Official Journal、条例和指令编号。",
+    rules: ["CJEU 判例可写案件号、案名、ECLI 和报告集或年份。", "条例、指令和决定应保留正式编号、题名、年份和 OJ 信息。", "检索和核验时可同时记录 ECLI、CELEX 或 EUR-Lex 永久链接。"],
+    examples: ["Case C-131/12 Google Spain SL v Agencia Espanola de Proteccion de Datos (AEPD) ECLI:EU:C:2014:317.", "Regulation (EU) 2016/679 of the European Parliament and of the Council [2016] OJ L119/1.", "Directive 2012/19/EU of the European Parliament and of the Council [2012] OJ L197/38."]
+  },
+];
+
+const choiceRules = [
+  { title: "投中文法学期刊", text: "先看目标刊物体例；若刊物说明采用《法学引注手册》，再按该手册统一细节。" },
+  { title: "写学位论文", text: "学校若要求文末参考文献，通常可用 GB/T 7714；正文法律材料仍建议用脚注说明。" },
+  { title: "写美国法论文", text: "涉及美国判例、法规和 law review 文献时，优先使用 Bluebook。" },
+  { title: "写英国法论文", text: "涉及英国判例、成文法和英国法学论文时，优先使用 OSCOLA。" },
+  { title: "写社会科学论文", text: "法律心理学、法社会学、实证法学和 AI 法学研究，常会遇到 APA 7th 或 Harvard。" },
+  { title: "写加拿大或澳洲法", text: "加拿大法优先 McGill Guide，澳大利亚法优先 AGLC。" },
+  { title: "写香港法论文", text: "记录 HKCFA、HKCA、HKCFI 等中立引证，同时保留 HKLRD、HKC、HKCFAR 等报告集信息。" },
+  { title: "写国际法或欧盟法", text: "国际法材料要保留条约集、ICJ 报告、联合国文件号；欧盟法要保留 ECLI、OJ 和法规编号。" },
+  { title: "写交叉学科论文", text: "政治学、社会学、历史学或法律与社会科学研究，可按期刊要求选择 Harvard、APA 或 Chicago。" },
+  { title: "中英文混合文献", text: "中文正文中引用外文文献，通常仍服从目标中文期刊的外文注释规则。" },
+  { title: "课程论文", text: "若教师未指定体例，中文法学写作建议采用《法学引注手册》的简明脚注规则。" },
+];
+
+const checklist = [
+  "每条引注都能让读者找到原始出处。",
+  "同一篇论文内部只使用一种主导体例。",
+  "直接引用必须有精确页码或段落号。",
+  "间接引用和转引要有清楚标识。",
+  "法条写明条、款、项、目，判例写明法院、案号或报告集。",
+  "网页资料保留网址和访问日期，重要网页最好存档。",
+  "文献管理软件生成后仍要人工核对。",
+  "投稿前按目标刊物最近版本重新通读注释规则。",
+];
+---
+
+<BaseLayout title="引注" description="中国中文法学文献与主要英文引注体例简明指南">
+  <header class="page-header">
+    <p class="eyebrow">Citation Styles</p>
+    <h1>引注</h1>
+    <p>本页收录中文法学文献常用引注体例，以及 GB/T 7714、APA 7th、美国 Bluebook、英国 OSCOLA、Harvard、Chicago、McGill Guide、AGLC、香港法、国际法材料和欧盟法材料等常见体例的简要规则和示例。它不是完整手册，作用是帮助学生先形成统一、可核验、可投稿前调整的引注习惯。</p>
+  </header>
+
+  <section class="section container">
+    <div class="matrix citation-matrix">
+      <div><strong>中文法学</strong><p>以脚注和《法学引注手册》为共同基准，同时服从目标刊物细则。</p></div>
+      <div><strong>Bluebook</strong><p>美国判例、法规、法律评论和法律备忘录常用。</p></div>
+      <div><strong>OSCOLA</strong><p>英国法学写作常用，强调法律权威的脚注引证。</p></div>
+      <div><strong>Harvard</strong><p>作者年份制，常见于社会科学和跨学科论文。</p></div>
+      <div><strong>Chicago</strong><p>兼有注释-书目制和作者-日期制，适合人文社科写作。</p></div>
+      <div><strong>GB/T 7714</strong><p>中国学位论文、社科论文和文末参考文献常见。</p></div>
+      <div><strong>APA 7th</strong><p>实证法学、法社会学和法律心理学常会遇到。</p></div>
+      <div><strong>McGill</strong><p>加拿大法律写作和加拿大法比较研究常用。</p></div>
+      <div><strong>AGLC</strong><p>澳大利亚法律写作常用的统一法律引注指南。</p></div>
+      <div><strong>香港法</strong><p>处理中立引证、报告集、法例章号和双语材料。</p></div>
+      <div><strong>国际法</strong><p>处理条约、ICJ、联合国文件和国际组织材料。</p></div>
+      <div><strong>欧盟法</strong><p>处理 CJEU、ECLI、OJ、条例和指令。</p></div>
+    </div>
+  </section>
+
+  <section class="section container article-stack">
+    <article class="article-section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Chinese Legal Citation</p>
+          <h2>中文法学引注体例</h2>
+        </div>
+        <p>中文法学论文通常以脚注呈现文献来源。下面列出常见期刊和共通手册的简要版，正式投稿时以目标刊物最新说明为准。</p>
+      </div>
+      <div class="grid two">
+        {chineseGuides.map((guide) => (
+          <article class="citation-card">
+            <p class="resource-meta"><span>{guide.source}</span></p>
+            <h3><a href={guide.url} target="_blank" rel="noreferrer">{guide.title}</a></h3>
+            <p>{guide.summary}</p>
+            <h4>简要规则</h4>
+            <ul>
+              {guide.rules.map((rule) => <li>{rule}</li>)}
+            </ul>
+            <h4>示例</h4>
+            <div class="citation-examples">
+              {guide.examples.map((example) => <code>{example}</code>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </article>
+
+    <article class="article-section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">Global Styles</p>
+          <h2>通行体例与比较法材料</h2>
+        </div>
+        <p>通行体例之间差异很大。法律写作优先看法域和刊物要求；跨学科写作则优先看课程、出版社或期刊指定。</p>
+      </div>
+      <div class="grid two">
+        {globalStyles.map((style) => (
+          <article class="citation-card">
+            <p class="resource-meta"><span>{style.region}</span></p>
+            <h3><a href={style.url} target="_blank" rel="noreferrer">{style.title}</a></h3>
+            <p class="byline">资料入口：{style.source}</p>
+            <p>{style.summary}</p>
+            <h4>简要规则</h4>
+            <ul>
+              {style.rules.map((rule) => <li>{rule}</li>)}
+            </ul>
+            <h4>示例</h4>
+            <div class="citation-examples">
+              {style.examples.map((example) => <code>{example}</code>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </article>
+  </section>
+
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">How to Choose</p>
+        <h2>如何选择体例</h2>
+      </div>
+      <p>引注体例没有抽象的最好，只有与作品类型、法域、期刊和课程要求相匹配。</p>
+    </div>
+    <div class="grid two">
+      {choiceRules.map((item) => (
+        <article class="info-card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section-header">
+      <div>
+        <p class="eyebrow">Checklist</p>
+        <h2>提交前核对</h2>
+      </div>
+      <p>好的引注不是形式主义，而是让读者能够复核你的材料、判断你的论证，并看见你对前人成果的尊重。</p>
+    </div>
+    <ol class="check-list">
+      {checklist.map((item) => <li>{item}</li>)}
+    </ol>
+  </section>
+</BaseLayout>

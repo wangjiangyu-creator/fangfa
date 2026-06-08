@@ -714,6 +714,7 @@ export const navItems = [
   { label: "专题", href: "/topics" },
   { label: "文献", href: "/resources" },
   { label: "范例", href: "/examples" },
+  { label: "引注", href: "/citation" },
   { label: "思维", href: "/thinking" },
   { label: "理论", href: "/theory" },
   { label: "交叉", href: "/interdisciplinary" },

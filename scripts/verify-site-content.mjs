@@ -33,6 +33,7 @@ assert.equal(sourceText.includes("LW6100"), false, "源码页面内容不应再�
 const astroConfig = await readFile(path.join(root, "astro.config.mjs"), "utf8");
 const layout = await readFile(path.join(srcDir, "layouts", "BaseLayout.astro"), "utf8");
 const index = await readFile(path.join(srcDir, "pages", "index.astro"), "utf8");
+const citationPage = await readFile(path.join(srcDir, "pages", "citation.astro"), "utf8");
 const theoryPage = await readFile(path.join(srcDir, "pages", "theory.astro"), "utf8");
 const interdisciplinaryPage = await readFile(
   path.join(srcDir, "pages", "interdisciplinary.astro"),
@@ -72,8 +73,33 @@ await esbuild.build({
   logLevel: "silent",
 });
 
-const { examples, exercises, resources, topics } = await import(pathToFileURL(bundledDataPath));
+const { examples, exercises, navItems, resources, topics } = await import(pathToFileURL(bundledDataPath));
 await rm(bundledDataPath, { force: true });
+
+assert.ok(
+  navItems.some((item) => item.label === "引注" && item.href === "/citation"),
+  "主导航应包含“引注”页面入口",
+);
+
+for (const phrase of [
+  "中文法学引注",
+  "《法学引注手册》",
+  "中国法学",
+  "中外法学",
+  "Bluebook",
+  "OSCOLA",
+  "Harvard",
+  "Chicago",
+  "GB/T 7714",
+  "APA 7th",
+  "McGill Guide",
+  "AGLC",
+  "香港法",
+  "国际法材料",
+  "欧盟法材料",
+]) {
+  assert.ok(citationPage.includes(phrase), `引注页应包含核心体例：${phrase}`);
+}
 
 assert.ok(resources.length >= 88, `文献数量应不少于 88 条，当前为 ${resources.length}`);
 assert.ok(
