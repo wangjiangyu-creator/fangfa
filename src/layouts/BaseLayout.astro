@@ -10,6 +10,7 @@ interface Props {
 
 const { title, description = "法律研究与思维方法课程网站" } = Astro.props;
 const currentPath = routePath(Astro.url.pathname);
+const isActiveNav = (href: string) => currentPath === href || currentPath.startsWith(`${href}/`);
 const siteNotice = "本网站由香港城市大学法律学院王江雨教授利用Codex创建，仅服务于其本人的教学研究目的";
 ---
 
@@ -32,7 +33,7 @@ const siteNotice = "本网站由香港城市大学法律学院王江雨教授利
       </a>
       <nav class="main-nav" aria-label="主导航">
         {navItems.map((item) => (
-          <a class:list={[currentPath === item.href && "active"]} href={siteHref(item.href)}>{item.label}</a>
+          <a class:list={[isActiveNav(item.href) && "active"]} href={siteHref(item.href)}>{item.label}</a>
         ))}
       </nav>
     </header>
